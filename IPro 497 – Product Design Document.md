@@ -67,11 +67,11 @@ App allows users (University specific students, initially Illinois Tech students
 ## Top Two to Three Scenarios
 
 ### Your Scenario #1
-Buy a book from another user, and arange a method to transport the book to the buyer
+User would like to buy a book from another user, and arange a method to transport the book to the buyer amongst the two parties
 ### Your Scenario #2
-Sell a book to another user, and arange a method to transport the book from the seller
+user would like to sell a book to another user, and arange a method to transport the book from them to the buyer, as previously arranged amongst themselves 
 ### Your Scenario #3
-rent
+User would like to temporarly rent a book from another user, and will pick up and return the book as arranged amongst the buyer and seller
 
 ## Team Members
 | Name  |Location |  time zone offset from Chicago |
@@ -81,6 +81,7 @@ rent
 | Christopher Hunter | Chicago, On-campus | 0 |
 | Samruddhi Sanjaykumar Kakade | Chicago, On-campus | 0 |
 | Marilyn Elaine Flowers | Chicago, Off-campus | 0 |
+| Angela Petrone | Chicago, On-campus | 0 |
 
 ## Team Working Agreement
 - We will use Github and keep items updated as progress is made
@@ -97,8 +98,10 @@ rent
   - being proactive in working on your part of the project and completing your assigned work on time.
 - List of who will present progress report and at what times
     - Alternate in this order (2 back to back presentations):
-        - a
-        - b
-        - c
-        - d
-        - e
+        - Ayman Fahsi 2/8, 2/15
+        - Christopher Hunter  2/22, 3/1
+        - Marilyn Elaine Flowers 3/8 , 3/15
+        - Chandrika Haldar 3/22, 3/29
+        - Samruddhi Sanjaykumar 4/5, 4/12
+        - Angela Petrone 4/19, 4/26
+         
