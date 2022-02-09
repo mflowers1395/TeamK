@@ -7,8 +7,6 @@ App provides a platform by which university students can buy, rent, and sell phy
  
 ## Customer
 
-<!-- reduce redundant information overall -->
-<!-- revise personas -->
 ### Persona Descriptions
 ![Damian Adams](https://image.shutterstock.com/image-photo/portrait-young-man-indian-origin-260nw-1850339038.jpg)
 
@@ -19,8 +17,8 @@ App provides a platform by which university students can buy, rent, and sell phy
 - On campus
 
 **Demographics**:
- - low income tax bracket 
- - Searching for affordable text books
+ - living on a tight budget 
+ - engineering courses require textbooks 
 
  **Goal**: find all his textbooks at an affordable price before courses start.(buyer/renter)
 
@@ -37,8 +35,9 @@ App provides a platform by which university students can buy, rent, and sell phy
 - Off campus
 
 **Demographics**:
- - financially independant
- - philanthropic tendancies.
+ - Full ride student
+ - philanthropic tendancies
+ - no younger siblings to pass textbooks onto
 
 
 
@@ -58,17 +57,15 @@ App provides a platform by which university students can buy, rent, and sell phy
 - Internet Access
 - Mobile Devices
 #### Server Tech
-- HTML
-- CSS
-- JavaScript
-- (others may be neccessary as project progresses)
+- Python
+- Django web framework
 
 ## Top Application Capabilities (priortiy)
 #### Core systems
-- Messaging system (logged server side as well)
 - Catalog of Books/Book Browser
 - Book listing managment system
-- Account managment system
+- Messaging system (logged server side as well)
+- Account management system
   - Credential checking system(hawk email)
 - Payment managment system
 
