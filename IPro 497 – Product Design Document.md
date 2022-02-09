@@ -114,10 +114,10 @@ User would like to temporarly rent a book from another user, and will pick up an
   - being proactive in working on your part of the project and completing your assigned work on time.
 - List of who will present progress report and at what times
     - Alternate in this order (2 back to back presentations):
-        - Ayman Fahsi 2/8, 2/15
-        - Christopher Hunter  2/22, 3/1
-        - Marilyn Elaine Flowers 3/8 , 3/15
-        - Chandrika Haldar 3/22, 3/29
-        - Samruddhi Sanjaykumar 4/5, 4/12
-        - Angela Petrone 4/19, 4/26
+        - Ayman Fahsi 2/1, 2/8
+        - Christopher Hunter  2/15, 2/22
+        - Marilyn Elaine Flowers 3/1, 3/8
+        - Chandrika Haldar 3/15, 3/22
+        - Samruddhi Sanjaykumar 3/29, 4/5
+        - Angela Petrone 4/12, 4/19
          
