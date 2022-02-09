@@ -2,22 +2,25 @@
 
 ## Problem statement
 App allows users (University specific students, initially Illinois Tech students) to buy, sell, rent, or exchange physical copies of any kind of book (not textbok exclusive) through online payments. Exchanges will occur in person, or will be settled amongst the specific users.
+
+App provides a platform by which university students can buy, rent, and sell physical books. This app also allows the users to discuss thier own transfer methods for both payment and book exchange.
  
 ## Customer
 
 <!-- reduce redundant information overall -->
 <!-- revise personas -->
 ### Persona Descriptions
-![Damian Adams](/assets/Damian.png)
+![Damian Adams](https://image.shutterstock.com/image-photo/portrait-young-man-indian-origin-260nw-1850339038.jpg)
+
 **Name**: Damian Adams
 
 **Background**:
 - Freshman IIT Student
 - On campus
-- Construction work over weekends
 
 **Demographics**:
- test
+ - low income tax bracket 
+ - Searching for affordable text books
 
  **Goal**: find all his textbooks at an affordable price before courses start.(buyer/renter)
 
@@ -25,16 +28,19 @@ App allows users (University specific students, initially Illinois Tech students
  - provides a means to connect Damian to other sources who may be offering the books at an affordable price(compared to pearson).
 
 
-![Kate Jones](/assets/kate.png)
+![Kate Jones](https://media.istockphoto.com/photos/asian-college-student-picture-id138017387?k=20&m=138017387&s=612x612&w=0&h=8_UuWJNQpmFvfDjRvdt3B-RVdwKGuzepAm-emyLuwrU=)
+
  **Name**: Kate Jones
 
 **Background**:
 - Junior IIT Student
 - Off campus
-- Intern at Amazon
 
 **Demographics**:
- test
+ - financially independant
+ - philanthropic tendancies.
+
+
 
  **Goal**: Get rid of her previous books in convenient way for monetary gain(seller)
 
