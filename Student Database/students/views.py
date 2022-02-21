@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import User
-from .forms import UserRegisterForm
+from users.models import User
+from users.forms import UserRegisterForm
 
 def register(request):
     if request.method == 'POST':
@@ -9,9 +9,17 @@ def register(request):
         if form.is_valid():
             user = User(firstname=form.cleaned_data['firstname'],lastname=form.cleaned_data['lastname'],email=form.cleaned_data['email'],username=form.cleaned_data['username'],CWID=form.cleaned_data['CWID'])
             user.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            # return redirect('') -> something will go here once homepage is established
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return redirect('login')  # edit redirect to somewhere else if necessary
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
+
+def userAcct(request):
+    
+    return render(request, 'users/home.html')
+
+
+    
+
+

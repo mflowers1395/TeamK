@@ -1,6 +1,4 @@
 from django.db import models
-from django.utils import timezone
-from django.contrib.auth.models import User
 
 class User(models.Model):
     firstname = models.CharField(max_length=20)
@@ -12,4 +10,14 @@ class User(models.Model):
 
     def __str__(self):
         return self.firstname + " " + self.lastname
+
+
+class Textbook(models.Model):
+    booktitle = models.CharField(max_length=30)
+    author = models.CharField(max_length=30)
+    ISBN = models.IntegerField()
+
+    def __str__(self):
+        return self.booktitle
+
 
