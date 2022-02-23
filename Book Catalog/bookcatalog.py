@@ -4,9 +4,10 @@ def show_book(book_catalog):
     title = input("Title: ")
     if title in book_catalog:
         book = book_catalog[title]
+        print()
         print("Title: " + title)
         print("Author: " + book ["author"])
-        print("Publication Year: " + book ["pubyear"])
+        print("Edition: " + book ["pubyear"])
     else:
         print("Sorry, " + title + " wasn't found. Please try a different search.")
 def add_edit_book(book_catalog, mode):
@@ -23,7 +24,7 @@ def add_edit_book(book_catalog, mode):
             return
 
     author = input("Author name: ")
-    pubyear = input("Publication year: ")
+    pubyear = input("Edition: ")
 
     book = {"author": author,
             "pubyear": pubyear}
@@ -69,3 +70,5 @@ def main():
         elif command == "exit":
             print("Catalog Closed")
             break
+
+main()
