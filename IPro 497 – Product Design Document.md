@@ -58,7 +58,10 @@ App provides a platform by which university students can buy, rent, and sell phy
 - Mobile Devices
 #### Server Tech
 - Python
+- HTML/CSS
 - Django web framework
+- Apache
+- mod_wsgi
 
 ## Top Application Capabilities (priortiy)
 #### Core systems
