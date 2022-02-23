@@ -1,17 +1,11 @@
-from cProfile import label
+import imp
 from django import forms
-from .models import User
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-
 class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
 
     class Meta:
         model = User
-        fields = ['firstname', 'lastname', 'email', 'username', 'CWID']
-        label = {'firstname': "First name", 'lastname': "Last name", 'email': "Email", 'username': "Username", 'CWID': "CWID",}
-
-    def __init__(self, *args, **kwargs):
-       super(UserRegisterForm, self).__init__(*args, **kwargs)
-       del self.fields['password1']
-       del self.fields['password2']
+        fields = ['email', 'username', 'password1', 'password2']
