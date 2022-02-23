@@ -1,0 +1,5 @@
+BookCatalog/ mainCatalog/
+BookCatalog/ searchResults
+BookCatalog/ buyBook/
+BookCatalog/ sellBook/
+messagingSystem/messagingPannel/
