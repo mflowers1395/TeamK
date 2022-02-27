@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration Portal</title>
-    {% load crispy_forms_tags %}
-    <div class=" content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Sign Up</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit" value="{% url 'login' %}">Sign Up</button>
-            </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
-            </small>
-        </div>
-    </div>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../../../../screen.css"/>
+  <title>Books4U Registration Portal</title>
 </head>
-<body>
-  
-</body>
-</html> 
+  <body>
+  <header>
+    <h1 id="site-name">Books4U</h1>
+    <figure>
+      <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo">
+    </figure>
+  </header>
+
+    {% load crispy_forms_tags %}
+  <main class= "content-section">
+      <form action= "../../../Student Database/students/templates/users/login.html" method="get">
+          {% csrf_token %}
+          <fieldset>
+              {{ form|crispy }}
+              <button class="button" type="submit" value="{% url 'login' %}">Sign Up</button>
+          </fieldset>
+      </form>
+      <article class="border-top pt-3">
+        <p class="text-muted">
+          Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+        </p>
+      </article>
+    </main>
+
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
+
+  </body>
+</html>
