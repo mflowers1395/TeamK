@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="container">
+    
+    {% block content %}
+    
+         <h1>Catalogue List</h1>
+
+    {% for textbook in textbook_list %}
+        <strong>{{ textbook }}</strong>
+        <ul>
+        <li>Author: {{ textbook.author }}</li>
+        <li>ISBN: {{ textbook.isbn }}</li>
+        
+        </ul>
+        </br>
+    {% endfor %}
+    
+    {% endblock %}
+
+<div class="border-top pt-3">
+    <small class="text-muted">
+        Finished? <a class="ml-2" href="{% url 'account' %}">Return to Acct Home</a>
+    </small>
+</div>
+
+</div>
+</head>
+</html>
