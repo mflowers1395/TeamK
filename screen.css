@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px;
+  border-top: solid;
+  border-bottom: solid;
+  border-style: solid;
+  border-color: black;
+}
+
+header > * {
+  width: 15%;
+}
+
+h1 {
+  color: black;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+img {
+  width: 60%;
+}
+
+main {
+  padding-top: 44px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 44px;
+}
+
+.flex-container {
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-role .flex-container {
+  justify-content: space-between;
+}
+
+.flex-container > * {
+  padding: 6px;
+  font-size: 14px;
+  flex: 0 0 60px;
+}
+
+.flex-container > .text,
+.flex-container > .book-pic > *{
+  flex: 0 0 200px;
+}
+
+#intro-copy {
+  text-align: center;
+  padding-bottom: 22px;
+}
+
+.button {
+  text-decoration: none;
+  border: 1px;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  border-style:solid;
+  border-color: #D3D3D3;
+  padding: 10px;
+  width: 100%;
+}
+
+form {
+  padding-top: 22px;
+  padding-bottom:  44px;
+}
+
+section {
+  padding-top: 22px;
+  border-top: 3px;
+  border-bottom: 3px;
+  border-color: black;
+  border-style: double;
+}
+
+form > * {
+  display: inline-block;
+}
+
+form > input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+form > fieldset {
+  display: block;
+  box-sizing: content-box;
+  padding: 6px;
+  border-width: 2px;
+  border-color: #D3D3D3;
+  border-style: solid;
+}
+
+form > label {
+  line-height: 15px;
+  font-size: 14px;
+  padding-top: 6px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 11px;
+  margin-top: 22px;
+  font-size: 12px;
+  text-align: center;
+}
+
+aside > ul > li {
+  list-style: none;
+}
+
+aside {
+  margin-bottom: 22px;
+}
+
+#user-role p {
+  text-align: center;
+}
+
+#user-role form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#user-role form >* {
+  margin: auto;
+  margin: 6px;
+  width: 90%;
+}
+
+@media screen and (min-width: 500px){
+ /* fix header */
+ img {
+   width: 80%;
+ }
+ .flex-container > * {
+   padding: 6px;
+   font-size: 16px;
+   flex: 0 0 90px;
+ }
+
+ .flex-container > .text,
+ .flex-container > .book-pic > *{
+   flex: 0 0 300px;
+ }
+
+ header > * {
+   width: 5%;
+ }
+
+}
