@@ -31,10 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users.apps.UsersConfig',
-    'catalogue.apps.CatalogueConfig',
-    'seller.apps.SellerConfig',
-    'crispy_forms',
+    'User_Registration.apps.UsersConfig',
+    'Catalogue.apps.CatalogueConfig',
+    'Seller.apps.SellerConfig',
+    #'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

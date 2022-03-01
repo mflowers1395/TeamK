@@ -1,5 +1,5 @@
 from django.contrib import admin
-from catalogue.models import Textbook
+from Catalogue.models import Textbook
 
 admin.site.register(Textbook)
 

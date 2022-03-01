@@ -17,19 +17,19 @@ from re import template
 from django.urls import path
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from users import views as user_views
-from seller import views as seller_views
-from catalogue import views as catalogue_views
+from User_Registration import views as user_views
+from Seller import views as seller_views
+from Catalogue import views as catalogue_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', user_views.register, name='register'),
+    path('register/', user_views.register, name='register.html'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('accounts/profile/', user_views.userAcct, name='account'),
     path('accounts/home/', seller_views.sellInterface, name='seller'),
     path('upload/', seller_views.uploadText, name='uploadtext'),
     path('catalogue/', catalogue_views.catalogueInterface, name='catalogue'),
-    path('browse/', catalogue_views.browseTextbooks, name='browse'),
+    path('browse/', catalogue_views.browseTextbooks, name='browse.html'),
 ]
 

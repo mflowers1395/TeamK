@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from seller.forms import UploadTextbookForm
-from catalogue.models import Textbook
+from Seller.forms import UploadTextbookForm
+from Catalogue.models import Textbook
 
 
 def sellInterface(request):
-    
     return render(request, 'seller/interface.html')
 
 def uploadText(request):
