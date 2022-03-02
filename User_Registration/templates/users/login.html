@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+<link rel="stylesheet" href="../../../screen.css"/>
 <title>Login Portal</title>
-    <div class=" content-section">
+</head>
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
+
+    <main class=" content-section">
         {% if messages %}
            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
+              <article class="alert alert-{{ message.tags }}">
                   {{ message }}
-              </div>
+              </article>
             {% endfor %}
         {% endif %}
+
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Login</legend>
+                <legend>Login</legend>
                 {{ form.as_p }}
             </fieldset>
-            <div class="form-group">
+            <fieldset class="form-group">
                 <button class="btn btn-outline-info" type="submit" value="{% url 'account' %}">Sign In</button>
-            </div>
+            </fieldset>
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
-            </small>
-        </div>
-    </div>
 
-</head>
-<body>
-  
-</body>
-</html> 
+        <article class="border-top pt-3">
+            <p class="text-muted">
+                Need An Account? <a class="ml-2" href="{% url 'register.html' %}">Sign Up Now</a>
+            </p>
+        </article>
+    </main>
+
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
+
+  </body>
+</html>

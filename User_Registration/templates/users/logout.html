@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <h2>You have been logged out</h2>
-    <div class=" content-section">
-        
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                 <a href="{% url 'login' %}">Log In Again</a>
-            </small>
-        </div>
-    </div>
-
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+<link rel="stylesheet" href="../../../screen.css"/>
+<title>Logout</title>
 </head>
-<body>
-  
-</body>
-</html> 
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
+
+    <body>
+    <h2>You have been logged out</h2>
+    <main class=" content-section">
+
+        <article class="border-top pt-3">
+            <p class="text-muted">
+                 <a href="{% url 'login' %}">Log In Again</a>
+            </p>
+        </article>
+    </main>
+
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
+
+  </body>
+</html>
