@@ -36,7 +36,6 @@ App provides a platform by which university students can buy, rent, and sell phy
 
 **Demographics**:
  - Full ride student
- - philanthropic tendancies
  - no younger siblings to pass textbooks onto
 
 
@@ -62,6 +61,7 @@ App provides a platform by which university students can buy, rent, and sell phy
 - Django web framework
 - Apache
 - mod_wsgi
+- Bootstrap4
 
 ## Top Application Capabilities (priortiy)
 #### Core systems
