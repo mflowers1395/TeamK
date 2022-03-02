@@ -83,9 +83,9 @@ App provides a platform by which university students can buy, rent, and sell phy
 ## Top Two to Three Scenarios
 
 ### Your Scenario #1
-User would like to buy a book from another user, and arange a method to transport the book to the buyer amongst the two parties
+User would like to buy a book from another user, and arrange a method to transport the book to the buyer amongst the two parties
 ### Your Scenario #2
-user would like to sell a book to another user, and arange a method to transport the book from them to the buyer, as previously arranged amongst themselves 
+user would like to sell a book to another user, and arrange a method to transport the book from them to the buyer, as previously arranged amongst themselves 
 ### Your Scenario #3
 User would like to temporarly rent a book from another user, and will pick up and return the book as arranged amongst the buyer and seller
 
