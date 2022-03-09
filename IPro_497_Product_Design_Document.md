@@ -65,19 +65,19 @@ App provides a platform by which university students can buy, rent, and sell phy
 
 ## Top Application Capabilities (priortiy)
 #### Core systems
-- Catalog of Books/Book Browser
-- Book listing managment system
-- Messaging system (logged server side as well)
-- Account management system
-  - Credential checking system(hawk email)
-- Payment managment system
+- Catalog of Books/Book Browser - KEEP
+- Book listing managment system - KEEP
+- Messaging system (logged server side as well) - KEEP
+- Account management system - KEEP
+  - Credential checking system(hawk email) - FORGO
+- Payment managment system - ONHOLD
 
 #### QoL systems
-- Fraud reporting system/ Logging system 
-- Meeting scheduling system
-- Individual Profiles
-- Wishlist of books(users are notified when an item on thier list becomes avaliable)
-- Book returning system
+- Fraud reporting system - KEEP/Logging system - KEEP
+- Meeting scheduling system - ONHOLD
+- Individual Profiles - FORGO
+- Wishlist of books(users are notified when an item on thier list becomes avaliable) - KEEP
+- Book returning system - FORGO
 
 
 ## Top Two to Three Scenarios
@@ -86,8 +86,6 @@ App provides a platform by which university students can buy, rent, and sell phy
 User would like to buy a book from another user, and arrange a method to transport the book to the buyer amongst the two parties
 ### Your Scenario #2
 user would like to sell a book to another user, and arrange a method to transport the book from them to the buyer, as previously arranged amongst themselves 
-### Your Scenario #3
-User would like to temporarly rent a book from another user, and will pick up and return the book as arranged amongst the buyer and seller
 
 ## Team Members
 | Name  |Location |  time zone offset from Chicago |
@@ -121,3 +119,4 @@ User would like to temporarly rent a book from another user, and will pick up an
         - Samruddhi Sanjaykumar 3/29, 4/5
         - Angela Petrone 4/12, 4/19
          
+      
