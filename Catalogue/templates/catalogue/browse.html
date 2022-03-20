@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<div class="container">
-    
-    {% block content %}
-    
-         <h1>Catalogue List</h1>
-
-    {% for textbook in textbook_list %}
-        <strong>{{ textbook }}</strong>
-        <ul>
-        <li>Author: {{ textbook.author }}</li>
-        <li>ISBN: {{ textbook.isbn }}</li>
-        
-        </ul>
-        </br>
-    {% endfor %}
-    
-    {% endblock %}
-
-<div class="border-top pt-3">
-    <small class="text-muted">
-        Finished? <a class="ml-2" href="{% url 'account' %}">Return to Acct Home</a>
-    </small>
-</div>
-
-</div>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+<link rel="stylesheet" href="../../../static/css/screen.css"/>
+<title>Catalogue</title>
 </head>
+
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
+
+    <main class="container">
+      <aside class="" id="user-header">
+        <ul class="flex-container">
+        <li>
+          <figure>
+          <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+          class ="flex-item" id="university-logo"/>
+        </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="../account-settings"><img src="../../../../static/assets/account-icon.png"
+              alt="icon to access account settings"
+              id="my-account" class="grid-item"/></a>
+          </figure>
+        </li>
+        </ul>
+      </aside>
+      <h1>Catalogue List</h1>
+
+      {% block content %}
+
+
+
+      {% for textbook in textbook_list %}
+          <strong>{{ textbook }}</strong>
+          <ul>
+          <li>Author: {{ textbook.author }}</li>
+          <li>ISBN: {{ textbook.isbn }}</li>
+
+          </ul>
+          </br>
+      {% endfor %}
+
+      {% endblock %}
+
+  <article>
+      <p>
+          Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
+      </p>
+  </article>
+
+    </main>
+
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
+
+  </body>
 </html>
