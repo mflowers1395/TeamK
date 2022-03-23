@@ -1,36 +1,58 @@
-{{ error }}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+<link rel="stylesheet" href="../../../static/css/screen.css"/>
+<title>Registration Portal</title>
+</head>
 
-<style>
-    h1 {text-align: center;}
-</style>
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
 
-{% if searchresults %}
+    <main>
+      {{ error }}
 
-    <h1> Search Result(s) Found</h1>
-    <br>
+      <style>
+          h1 {text-align: center;}
+      </style>
 
-{% for search in searchresults %}
-   <strong>{{ search }}</strong>
-   <ul>
-   <li>Author: {{ search.author }}</li>
-   <li>ISBN: {{ search.isbn }}</li>
-   
-   </ul>
-   </br>
-{% endfor %}
+      {% if searchresults %}
 
-{% else %}
-   <h1>No Results Found</h1>
+          <h1>Search Result(s) Found</h1>
+          <article>
 
-{% endif %}
+          {% for search in searchresults %}
+             <strong>{{ search }}</strong>
+             <ul>
+               <li>Author: {{ search.author }}</li>
+               <li>ISBN: {{ search.isbn }}</li>
+             </ul>
+          </article>
+      {% endfor %}
 
+      {% else %}
+         <h1>No Results Found</h1>
 
-<div class="border-top pt-3">
-    <small class="text-muted">
-     Finished? <a class="ml-2" href="{% url 'account' %}">Return to Acct Home</a>
-    </small>
-</div>
-
+      {% endif %}
 
 
+      <article class="border-top pt-3">
+          <p>
+           Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
+          </p>
+      </article>
 
+      </main>
+      <footer id="footer">
+        <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+          Illinois Institute of Technology, Spring 2022</p>
+      </footer>
+
+  </body>
+</html>

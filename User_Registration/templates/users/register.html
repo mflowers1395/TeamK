@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-<link rel="stylesheet" href="../../../screen.css"/>
+<link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Registration Portal</title>
 </head>
 
@@ -11,9 +11,10 @@
     <header>
       <h1 id="site-name">Books4U</h1>
       <figure>
-        <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo"/>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
+
 
     {% load crispy_forms_tags %}
     <main class=" content-section">
@@ -24,18 +25,20 @@
                 {{ form|crispy }}
             </fieldset>
             <fieldset class="form-group">
-                <button class="btn btn-outline-info" type="submit" value="{% url 'login' %}">Sign Up</button>
+                <button class="button btn-outline-info" type="submit" value="{% url 'login' %}">Sign Up</button>
             </fieldset>
         </form>
         <article>
             <p>
-                Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+              Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
             </p>
         </article>
     </main>
 
-</head>
-<body>
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
 
-</body>
+  </body>
 </html>
