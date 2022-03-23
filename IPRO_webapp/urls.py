@@ -23,7 +23,7 @@ from Catalogue import views as catalogue_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', user_views.register, name='register.html'),
+    path('', user_views.register, name='register.html'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('accounts/profile/', user_views.userAcct, name='account'),
@@ -31,5 +31,12 @@ urlpatterns = [
     path('upload/', seller_views.uploadText, name='uploadtext'),
     path('catalogue/', catalogue_views.catalogueInterface, name='catalogue'),
     path('browse/', catalogue_views.browseTextbooks, name='browse.html'),
+    path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete.html'),
+    path('browse/delete.html/browse.html', catalogue_views.browseTextbooks, name='browse.html'),
+    path('browse/delete.html/delete.html', catalogue_views.deleteuploadtext, name='delete.html'),
+   
+    
+    
+    
 ]
 
