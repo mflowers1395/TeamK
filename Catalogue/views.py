@@ -1,7 +1,7 @@
 import imp
 from turtle import title
 from django.shortcuts import render
-from catalogue.models import Textbook
+from Catalogue.models import Textbook
 
 def catalogueInterface(request):
     
