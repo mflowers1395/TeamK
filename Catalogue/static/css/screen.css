@@ -11,6 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 html {
+  font-family: "Didot", serif;
   font-size: 18px;
   line-height: 22px;
 }
@@ -29,7 +30,13 @@ header > * {
   width: 15%;
 }
 
+#site-name {
+  font-family: "American Typewriter", serif;
+  font-weight: normal;
+}
+
 h1 {
+  font-weight: bolder;
   color: black;
   font-size: 26px;
   line-height: 28px;
@@ -37,6 +44,13 @@ h1 {
 
 img {
   width: 60%;
+}
+
+a {
+  font-family: "American Typewriter", serif;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 12px;
 }
 
 main {
@@ -77,12 +91,12 @@ main {
 .button {
   text-decoration: none;
   border: 1px;
-  background-color: green;
-  border-radius: 5px;
+  background-color: gray;
+  border-radius: 20px;
   color: white;
   border-style:solid;
   border-color: #D3D3D3;
-  padding: 10px;
+  padding: 8px;
   width: 100%;
 }
 

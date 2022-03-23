@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-<link rel="stylesheet" href="../../../screen.css"/>
+<link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Logout</title>
 </head>
   <body>
     <header>
       <h1 id="site-name">Books4U</h1>
       <figure>
-        <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo"/>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
 
-    <body>
-    <h2>You have been logged out</h2>
-    <main class=" content-section">
 
-        <article class="border-top pt-3">
-            <p class="text-muted">
-                 <a href="{% url 'login' %}">Log In Again</a>
-            </p>
-        </article>
+    <main class=" content-section">
+      <h2>You have been logged out</h2>
+
+      <article>
+        <p>
+          <a href="{% url 'login' %}">Log In Again</a>
+        </p>
+      </article>
     </main>
 
     <footer id="footer">

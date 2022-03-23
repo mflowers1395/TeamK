@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-<link rel="stylesheet" href="../../../screen.css"/>
+<link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Login Portal</title>
 </head>
   <body>
     <header>
       <h1 id="site-name">Books4U</h1>
       <figure>
-        <img id="logo" src="../../../../assets/booklogo.png" alt="Books4U logo"/>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
+
 
     <main class=" content-section">
         {% if messages %}
@@ -30,12 +31,12 @@
                 {{ form.as_p }}
             </fieldset>
             <fieldset class="form-group">
-                <button class="btn btn-outline-info" type="submit" value="{% url 'account' %}">Sign In</button>
+                <button class="button btn-outline-info" type="submit" value="{% url 'account' %}">Sign In</button>
             </fieldset>
         </form>
 
-        <article class="border-top pt-3">
-            <p class="text-muted">
+        <article>
+            <p>
                 Need An Account? <a class="ml-2" href="{% url 'register.html' %}">Sign Up Now</a>
             </p>
         </article>
