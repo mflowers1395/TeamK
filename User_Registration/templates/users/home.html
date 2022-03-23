@@ -34,11 +34,14 @@
         </ul>
       </aside>
       <p>Hi *username*, what are you looking for?</p>
-      <form class="" action="../home" method="get">
-        <button type="submit" name="button" id="buyer-button" value="#" class="button">BUYER</button>  <!-- Replace '#' in value once buyer is functioning -->
-        <button type="submit" name="button" id="seller-button" value="{% url 'seller' %}" class="button">SELLER</button>
-        <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-        <button type="button" name="button" id="catalogue-button" class="ml-2 button" value="{% url 'catalogue' %}">CATALOGUE</a>
+      <form method="POST">
+          {% csrf_token %}
+        <fieldset class="form-group">
+          <button type="submit" id="buyer-button" value="#" class="button">BUYER</button>  <!-- Replace '#' in value once buyer is functioning -->
+          <button type="submit" id="seller-button" value="{% url 'seller' %}" class="button">SELLER</button>
+          <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
+          <button class="button btn-outline-info" type="submit" id="catalogue-button" value="{% url 'Catalogue' %}">CATALOGUE</button>
+        </fieldset>
       </form>
     </main>
 
