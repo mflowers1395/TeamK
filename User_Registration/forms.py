@@ -9,3 +9,12 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['email', 'username', 'password1', 'password2']
+
+class WishlistForm(forms.Form):
+
+    username = forms.CharField(max_length=50)
+    isbn = forms.CharField(max_length=13)
+
+
+
+
