@@ -36,6 +36,31 @@ item they finished, and what work item they are working on. Their should be very
 - Spring Break
 ## Week 11 - Mar 22 ##
 
+- Chandrika(SCRUM Lead this week)
+
+	- Still working on Story #35
+	- Helping on #33
+
+- Ayman
+	- #34 and should be done today
+		○ Really sparse description and acceptance criteria
+	- #30 still in progress
+	- Will create a new story on payment management system
+- Christopher
+	- Completed #32 (nice story structure)
+	- Wrote new story #39 fraud reporting
+	
+ - Marilyn
+	 - Still working on  #31
+
+ - Angela
+	 - Closed #33 and 
+	 - Working on #38  (not assigned to the story yet)
+	 - Planning to write an other style sheet story
+	
+Remember the dry run demo/presentation is on 4/19 and the final class presentation is on 4/26. In addition, there is the audience choice part of the pitch competition on 4/22
+
+
 ## Week 12 - Mar 29 ##
 
 ## Week 13 - Apr 5 ##
