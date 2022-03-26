@@ -196,3 +196,20 @@ aside {
  }
 
 }
+
+@media screen and (min-width: 1000px){
+  .button {
+    max-width: 200px;
+  }
+
+  form > fieldset {
+      border-style: none;
+  }
+
+  fieldset > * {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: column-reverse;
+  }
+}
