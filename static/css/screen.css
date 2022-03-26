@@ -140,6 +140,23 @@ em {
   font-weight: bold;
 }
 
+small {
+  font-size: 14px;
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 11px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: capitalize;
+  padding-bottom: 22px;
+  margin: auto;
+}
+
 form > label {
   line-height: 15px;
   font-size: 14px;
