@@ -40,6 +40,7 @@ h1 {
   color: black;
   font-size: 26px;
   line-height: 28px;
+  padding-bottom: 22px;
 }
 
 img {
@@ -102,7 +103,7 @@ main {
 
 form {
   padding-top: 22px;
-  padding-bottom:  44px;
+  padding-bottom: 44px;
 }
 
 section {
@@ -127,9 +128,16 @@ form > fieldset {
   display: block;
   box-sizing: content-box;
   padding: 6px;
-  border-width: 2px;
-  border-color: #D3D3D3;
-  border-style: solid;
+  /*border-left-width: 6px;
+  border-left-color: red;/*#D3D3D3
+  border-left-style: solid;
+  border-right-width: 5px;
+  border-right-color: red;
+  border-right-style: solid;*/
+}
+
+em {
+  font-weight: bold;
 }
 
 form > label {
@@ -139,7 +147,7 @@ form > label {
   text-align: center;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 footer {
@@ -160,17 +168,17 @@ aside {
   margin-bottom: 22px;
 }
 
-#user-role p {
+p {
   text-align: center;
 }
 
-#user-role form {
+form {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
 }
 
-#user-role form >* {
+form > * {
   margin: auto;
   margin: 6px;
   width: 90%;
@@ -196,6 +204,19 @@ aside {
    width: 5%;
  }
 
+ .button {
+   width: 60%;
+   display: flex;
+   flex-flow: column;
+   margin: auto;
+ }
+
+}
+
+@media screen and (min-width: 700px){
+  .button {
+    width: 40%;
+  }
 }
 
 
@@ -204,13 +225,7 @@ aside {
     max-width: 200px;
   }
 
-  form > fieldset {
-      border-style: none;
-  }
-
   fieldset > * {
-    margin: auto;
-    display: flex;
     flex-direction: row;
     flex-flow: column-reverse;
   }
