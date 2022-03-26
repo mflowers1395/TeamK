@@ -42,11 +42,9 @@
       {% for textbook in textbook_list %}
           <strong>{{ textbook }}</strong>
           <ul>
-          <li>Author: {{ textbook.author }}</li>
-          <li>ISBN: {{ textbook.isbn }}</li>
-
+            <li>Author: {{ textbook.author }}</li>
+            <li>ISBN: {{ textbook.isbn }}</li>
           </ul>
-          </br>
       {% endfor %}
 
       {% endblock %}
