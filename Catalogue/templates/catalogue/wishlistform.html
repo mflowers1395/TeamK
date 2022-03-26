@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="user-role">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
@@ -39,16 +39,19 @@
 
       {% load crispy_forms_tags %}
       <form method="POST">
-          {% csrf_token %}
-          <fieldset class="form-group">
-              {{ form|crispy }}
-          </fieldset>
-          <fieldset class="form-group">
-            <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
-          </fieldset>
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <fieldset class="form-group">
+          <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
+        </fieldset>
       </form>
 
       {% block content %}
+      <style>
+        h1 {text-align: center;}
+      </style>
 
       <h1>Catalogue List</h1>
 
@@ -67,7 +70,7 @@
 
       <article>
           <p>
-              Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>
+              Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
           </p>
       </article>
 
