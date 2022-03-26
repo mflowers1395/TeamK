@@ -1,8 +1,8 @@
 from tkinter import W
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from users.forms import UserRegisterForm
-from users.models import WishList
+from User_Registration.forms import UserRegisterForm
+from User_Registration.models import WishList
 
 
 def register(request):
@@ -20,29 +20,19 @@ def register(request):
 
 
 def userAcct(request):
-    
+
     return render(request, 'users/home.html')
 
-             
+
 def wishlist(request):
 
     if request.user.is_authenticated:
 
         username = request.user.username
         wishlist = WishList.objects.filter(username__contains=username).last()
-        
+
         return render(request, 'users/wishlist.html', {'wishlist': wishlist})
 
     else:
         messages.error(request, f'This account is not authorized. Returning to login')
         return redirect('login')
-
-
-
-
-
-
- 
-
-
-
