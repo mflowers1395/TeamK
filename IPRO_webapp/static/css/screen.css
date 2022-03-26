@@ -223,8 +223,7 @@ form > * {
 
  .button {
    width: 60%;
-   display: flex;
-   flex-flow: column;
+   display: grid;
    margin: auto;
  }
 
