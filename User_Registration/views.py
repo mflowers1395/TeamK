@@ -1,8 +1,8 @@
 from tkinter import W
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from users.forms import UserRegisterForm
-from users.models import WishList
+from User_Registration.forms import UserRegisterForm
+from User_Registration.models import WishList
 
 
 def register(request):

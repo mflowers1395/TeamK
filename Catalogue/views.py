@@ -2,9 +2,9 @@ import imp
 from turtle import title
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from catalogue.models import Textbook
-from users.models import WishList
-from users.forms import WishlistForm
+from Catalogue.models import Textbook
+from User_Registration.models import WishList
+from User_Registration.forms import WishlistForm
 from django.contrib.auth import get_user_model
 
 def catalogueInterface(request):
