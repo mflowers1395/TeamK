@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-<link rel="stylesheet" href="../../../static/css/screen.css"/>
-<title>Registration Portal</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"/>
+  <link rel="stylesheet" href="../../../static/css/screen.css"/>
+  <title>Search Catalogue</title>
 </head>
 
   <body>
@@ -15,29 +15,44 @@
       </figure>
     </header>
 
-    <main>
+    <main class=" content-section">
+      <aside class="" id="user-header">
+        <ul class="flex-container">
+        <li>
+          <figure>
+          <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+          class ="flex-item" id="university-logo"/>
+        </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="../account-settings"><img src="../../../../static/assets/account-icon.png"
+              alt="icon to access account settings"
+              id="my-account" class="grid-item"/></a>
+          </figure>
+        </li>
+        </ul>
+      </aside>
+
       {{ error }}
 
-      <style>
-          h1 {text-align: center;}
-      </style>
+      <style> h1 {text-align: center;} </style>
 
       {% if searchresults %}
 
-          <h1>Search Result(s) Found</h1>
-          <article>
-
-          {% for search in searchresults %}
-             <strong>{{ search }}</strong>
-             <ul>
-               <li>Author: {{ search.author }}</li>
-               <li>ISBN: {{ search.isbn }}</li>
-             </ul>
-          </article>
+      <h1>Search Result(s) Found</h1>
+      <article>
+        {% for search in searchresults %}
+        <strong>{{ search }}</strong>
+         <ul>
+           <li>Author: {{ search.author }}</li>
+           <li>ISBN: {{ search.isbn }}</li>
+         </ul>
+      </article>
       {% endfor %}
 
       {% else %}
-         <h1>No Results Found</h1>
+      <h1>No Results Found</h1>
 
       {% endif %}
 
@@ -48,11 +63,11 @@
           </p>
       </article>
 
-      </main>
-      <footer id="footer">
-        <p>Site content and design copyright TeamK "IPRO: Global Product Development",
-          Illinois Institute of Technology, Spring 2022</p>
-      </footer>
+    </main>
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
 
   </body>
 </html>

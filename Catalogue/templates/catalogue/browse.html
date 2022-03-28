@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html id="browse-catalogue">
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
-<title>Catalogue</title>
+<title>Browse Catalogue</title>
 </head>
 
   <body>
@@ -15,7 +15,7 @@
       </figure>
     </header>
 
-    <main class="container">
+    <main class="container content-section">
       <aside class="" id="user-header">
         <ul class="flex-container">
         <li>
@@ -42,11 +42,9 @@
       {% for textbook in textbook_list %}
           <strong>{{ textbook }}</strong>
           <ul>
-          <li>Author: {{ textbook.author }}</li>
-          <li>ISBN: {{ textbook.isbn }}</li>
-
+            <li>Author: {{ textbook.author }}</li>
+            <li>ISBN: {{ textbook.isbn }}</li>
           </ul>
-          </br>
       {% endfor %}
 
       {% endblock %}

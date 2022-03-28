@@ -1,48 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-form {text-align: center;}
-</style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" href="../../../static/css/screen.css"/>
+    <title>Add to Your Wishlist</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
 
-<title>Add to Your Wishlist</title>
-    {% load crispy_forms_tags %}
-    <div class=" content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
-            </div>
-        </form>
-   
-    {% block content %}
-    
-         <h1>Catalogue List</h1>
+    <main class=" content-section">
+      <aside class="" id="user-header">
+        <ul class="flex-container">
+        <li>
+          <figure>
+          <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+          class ="flex-item" id="university-logo"/>
+        </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="../account-settings"><img src="../../../../static/assets/account-icon.png"
+              alt="icon to access account settings"
+              id="my-account" class="grid-item"/></a>
+          </figure>
+        </li>
+        </ul>
+      </aside>
 
-    {% for textbook in textbook_list %}
+      <style>
+        form {text-align: center;}
+      </style>
 
-            <strong>{{ textbook }}</strong>
+      {% load crispy_forms_tags %}
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <fieldset class="form-group">
+          <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
+        </fieldset>
+      </form>
 
-            <ul>
-            <li>Author: {{ textbook.author }}</li>
-            <li>ISBN: {{ textbook.isbn }}</li>
-        
-            </ul>
-            </br>
+      {% block content %}
+      <style>
+        h1 {text-align: center;}
+      </style>
 
-    {% endfor %}
-    
-    {% endblock %}
+      <h1>Catalogue List</h1>
 
-<div class="border-top pt-3">
-    <small class="text-muted">
-        Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>
-    </small>
-</div>
+      {% for textbook in textbook_list %}
 
-</div>
-</head>
+      <strong>{{ textbook }}</strong>
+
+      <ul>
+        <li>Author: {{ textbook.author }}</li>
+        <li>ISBN: {{ textbook.isbn }}</li>
+      </ul>
+
+      {% endfor %}
+
+      {% endblock %}
+
+      <article>
+          <p>
+              Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
+          </p>
+      </article>
+
+    </main>
+
+    <footer id="footer">
+      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+        Illinois Institute of Technology, Spring 2022</p>
+    </footer>
+
+  </body>
 </html>
