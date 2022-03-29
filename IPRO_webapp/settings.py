@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'Catalogue.apps.CatalogueConfig',
     'Seller.apps.SellerConfig',
     'LandingPage.apps.LandingpageConfig',
+    'Messaging_System',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

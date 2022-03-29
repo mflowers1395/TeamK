@@ -33,14 +33,15 @@
         </li>
         </ul>
       </aside>
-      <p>Hi *username*, what are you looking for?</p>
+      <p>Hi {{request.user}}, what are you looking for?</p>
       <form method="POST">
           {% csrf_token %}
         <fieldset class="form-group">
           <button type="submit" id="buyer-button" value="#" class="button">BUYER</button>  <!-- Replace '#' in value once buyer is functioning -->
           <button type="submit" id="seller-button" value="{% url 'seller' %}" class="button">SELLER</button>
           <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-          <button class="button btn-outline-info" type="submit" id="catalogue-button" value="{% url 'catalogue' %}">CATALOGUE</button>
+          <a class="button btn-outline-info" href="{% url 'catalogue' %}">CATALOGUE</a>
+          <a class="button btn-outline-info" href="{% url 'Messages' %}">MESSAGES</a>
         </fieldset>
       </form>
     </main>
