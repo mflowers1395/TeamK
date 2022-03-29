@@ -40,7 +40,7 @@ h1 {
   color: black;
   font-size: 26px;
   line-height: 28px;
-  padding-bottom: 22px;
+  padding-bottom: 33px;
 }
 
 img {
@@ -104,6 +104,9 @@ main {
 form {
   padding-top: 22px;
   padding-bottom: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 section {
@@ -189,16 +192,18 @@ p {
   text-align: center;
 }
 
-form {
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
 form > * {
   margin: auto;
   margin: 6px;
   width: 90%;
+}
+
+#browse-catalogue ul {
+  padding-bottom: 22px;
+}
+
+#browse-catalogue strong {
+  font-style: italic;
 }
 
 @media screen and (min-width: 500px){
@@ -233,6 +238,10 @@ form > * {
   .button {
     width: 40%;
   }
+
+  form {
+    width: 60%;
+  }
 }
 
 
@@ -244,5 +253,9 @@ form > * {
   fieldset > * {
     flex-direction: row;
     flex-flow: column-reverse;
+  }
+
+  form {
+    width: 40%;
   }
 }

@@ -20,9 +20,12 @@ from django.contrib.auth import views as auth_views
 from User_Registration import views as user_views
 from Seller import views as seller_views
 from Catalogue import views as catalogue_views
+from LandingPage import views as landing
+from Messaging_System import views as messaging_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', landing.launchLandingPage, name ='landingPage'),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
@@ -32,9 +35,13 @@ urlpatterns = [
     path('catalogue/', catalogue_views.catalogueInterface, name='catalogue'),
     path('browse/', catalogue_views.browseTextbooks, name='browse'),
     path('search/', catalogue_views.searchCatalogue, name='search'),
-    #path('wishlistform/', catalogue_views.wishlistForm, name='wishlistform'),
-    #path('wishlist/', user_views.wishlist, name='wishlist'),
-    path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete.html'),
+    path('Messages', messaging_views.showChats, name='Messages'),
+    path('Messages/newchat', messaging_views.newChat, name='newchat'),
+    path('Messages/<int:pk>/', messaging_views.showMessages, name='chat'),
+    path('Messages/<int:pk>/NewMessage/', messaging_views.newMessage, name='NewMessage'),
+    path('wishlistform/', catalogue_views.wishlistForm, name='wishlistform'),
+    path('wishlist/', user_views.wishlist, name='wishlist'),
+    path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete'),
     path('browse/delete.html/browse.html', catalogue_views.browseTextbooks, name='browse.html'),
     path('browse/delete.html/delete.html', catalogue_views.deleteuploadtext, name='delete.html'),
 ]
