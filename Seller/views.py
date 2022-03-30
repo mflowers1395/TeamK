@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from Seller.forms import UploadTextbookForm
 from Catalogue.models import Textbook
+from django.contrib.auth.models import User
 
 
 def sellInterface(request):
@@ -12,7 +13,7 @@ def uploadText(request):
         form = UploadTextbookForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            tb = Textbook(booktitle = cd['title'], author = cd['author'], isbn = cd['isbn'])
+            tb = Textbook(booktitle = cd['title'], author = cd['author'], isbn = cd['isbn'], poster = request.user)
             tb.save()
             booktitle = cd.get('title')
             messages.success(request, f'{booktitle} successfully uploaded to catalogue!')
