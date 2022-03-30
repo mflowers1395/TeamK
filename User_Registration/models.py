@@ -1,5 +1,5 @@
 from django.db import models
-from catalogue.models import Textbook
+from Catalogue.models import Textbook
 
 class WishList(models.Model):
 
