@@ -8,3 +8,12 @@ class WishList(models.Model):
 
     def __str__(self):
         return self.username
+
+class Fraud(models.Model):
+
+    username = models.CharField(max_length=50)
+    report = models.CharField(max_length=100)
+    
+
+    def __str__(self):
+        return self.username

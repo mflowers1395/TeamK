@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" id="user-role">
   <head>
+    <div class=" content-section">
+      {% if messages %}
+         {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+          {% endfor %}
+      {% endif %} 
+  </div>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-    <link rel="stylesheet" href="../../../static/css/screen.css"/>
+    <link rel="stylesheet" href="../screen.css"/>
     <title>Books4U</title>
   </head>
   <body>
     <header>
       <h1 id="site-name">Books4U</h1>
       <figure>
-        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+        <img id="logo" src="" alt="Books4U logo">
       </figure>
     </header>
 

@@ -25,7 +25,6 @@ from Messaging_System import views as messaging_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', landing.launchLandingPage, name ='landingPage'),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
@@ -35,6 +34,7 @@ urlpatterns = [
     path('catalogue/', catalogue_views.catalogueInterface, name='catalogue'),
     path('browse/', catalogue_views.browseTextbooks, name='browse'),
     path('search/', catalogue_views.searchCatalogue, name='search'),
+    path('reportfraud/', user_views.reportFraud, name='repfraud'),
     path('Messages', messaging_views.showChats, name='Messages'),
     path('Messages/newchat', messaging_views.newChat, name='newchat'),
     path('Messages/<int:pk>/', messaging_views.showMessages, name='chat'),
