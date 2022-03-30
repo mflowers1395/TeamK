@@ -10,16 +10,21 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['email', 'username', 'password1', 'password2']
 
+class WishlistForm(forms.Form):
+
+    username = forms.CharField(max_length=50)
+    isbn = forms.CharField(max_length=13)
+
 class chatForm(forms.Form):  
     username = forms.CharField(label='', max_length=100)
     
 class messageForm(forms.Form):  
     message = forms.CharField(label='', max_length=1000)
 
-class WishlistForm(forms.Form):
+class ReportFraudForm(forms.Form):
 
     username = forms.CharField(max_length=50)
-    isbn = forms.CharField(max_length=13)
+    report = forms.CharField(widget=forms.Textarea())
 
 
 
