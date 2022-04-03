@@ -89,7 +89,8 @@ main {
   padding-bottom: 22px;
 }
 
-.button {
+.button,
+a.button {
   text-decoration: none;
   border: 1px;
   background-color: gray;
@@ -98,6 +99,14 @@ main {
   border-style:solid;
   border-color: #D3D3D3;
   padding: 8px;
+  width: 100%;
+}
+
+a.button {
+  text-align: center;
+  font-family: Arial;
+  font-weight: normal;
+  display: inline-block;
   width: 100%;
 }
 
@@ -226,7 +235,8 @@ form > * {
    width: 5%;
  }
 
- .button {
+ .button,
+  a.button {
    width: 60%;
    display: grid;
    margin: auto;
@@ -235,7 +245,8 @@ form > * {
 }
 
 @media screen and (min-width: 700px){
-  .button {
+  .button,
+  a.button {
     width: 40%;
   }
 
