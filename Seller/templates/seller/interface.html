@@ -29,10 +29,9 @@
             </fieldset>
             <fieldset class="form-group">
                 <!-- <button class="btn btn-outline-info" type="button" value="#">Upload Textbook</button> -->
-                 <!-- <button class="btn btn-outline-info" type="submit" value="#">Msg Users</button> -->  <!-- replace '#' in value when Msg system is functioning -->
                  <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-                 <button class="ml-2 button" href="{% url 'uploadtext' %}">Upload a Textbook</button>
-                 <button class="ml-2 button" href="#">Message Others</button> <!-- modify href once msg system is finished -->
+                <button class="ml-2 button" value="{% url 'uploadtext' %}">Upload a Textbook</button>
+                <a id="messages-button" class="button" href="{% url 'Messages' %}">Message Others</a>
             </fieldset>
         </form>
         <article>
