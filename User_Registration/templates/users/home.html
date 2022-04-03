@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" id="user-role">
   <head>
-    <div class=" content-section">
+    <article class=" content-section">
       {% if messages %}
          {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
+            <p class="alert alert-{{ message.tags }}">
                 {{ message }}
-            </div>
+            </p>
           {% endfor %}
-      {% endif %} 
-  </div>
+      {% endif %}
+    </article>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-    <link rel="stylesheet" href="../screen.css"/>
+    <link rel="stylesheet" href="../../../static/css/screen.css"/>
     <title>Books4U</title>
   </head>
+
   <body>
     <header>
       <h1 id="site-name">Books4U</h1>
       <figure>
-        <img id="logo" src="" alt="Books4U logo">
+          <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
-
 
     <main>
       <aside class="" id="user-header">
@@ -49,8 +49,8 @@
           <button type="submit" id="buyer-button" value="#" class="button">BUYER</button>  <!-- Replace '#' in value once buyer is functioning -->
           <button type="submit" id="seller-button" value="{% url 'seller' %}" class="button">SELLER</button>
           <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-          <a class="button btn-outline-info" href="{% url 'catalogue' %}">CATALOGUE</a>
-          <a class="button btn-outline-info" href="{% url 'Messages' %}">MESSAGES</a>
+          <a id="catalogue-button" class="button" href="{% url 'catalogue' %}">CATALOGUE</a>
+          <a id="messages-button" class="button" href="{% url 'Messages' %}">MESSAGES</a>
         </fieldset>
       </form>
     </main>
