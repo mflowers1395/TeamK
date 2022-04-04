@@ -91,6 +91,8 @@ main {
 
 .button,
 a.button {
+  font-family: Arial;
+  font-weight: normal;
   text-decoration: none;
   border: 1px;
   background-color: gray;
@@ -103,9 +105,6 @@ a.button {
 }
 
 a.button {
-  text-align: center;
-  font-family: Arial;
-  font-weight: normal;
   display: inline-block;
   width: 100%;
 }
