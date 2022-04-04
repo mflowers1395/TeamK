@@ -107,6 +107,7 @@ a.button {
 a.button {
   display: inline-block;
   width: 100%;
+  text-align: center;
 }
 
 form {
