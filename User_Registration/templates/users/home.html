@@ -46,10 +46,9 @@
       <form method="POST">
           {% csrf_token %}
         <fieldset class="form-group">
-          <button type="submit" id="buyer-button" value="#" class="button">BUYER</button>  <!-- Replace '#' in value once buyer is functioning -->
-          <button type="submit" id="seller-button" value="{% url 'seller' %}" class="button">SELLER</button>
+          <button type="submit" id="seller-button" value="{% url 'seller' %}" class="button">SELL A BOOK</button>
           <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-          <a id="catalogue-button" class="button" href="{% url 'catalogue' %}">CATALOGUE</a>
+          <a id="catalogue-button" class="button" href="{% url 'catalogue' %}">BROWSE BOOKS CATALOGUE</a>
           <a id="messages-button" class="button" href="{% url 'Messages' %}">MESSAGES</a>
         </fieldset>
       </form>
