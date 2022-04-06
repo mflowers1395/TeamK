@@ -37,11 +37,21 @@
 
       <h1>Which book do you want to delete?</h1>
 
-      <strong>{{ textbook }}</strong>
-      <ul>
-        <li>Author: {{ textbook.author }}</li>
-        <li>ISBN: {{ textbook.isbn }}</li>
-      </ul>
+      {% block content %}
+
+
+
+      {% for textbook in textbook_list %}
+          <strong>{{ textbook }}</strong>
+          <ul>
+            <li>Author: {{ textbook.author }}</li>
+            <li>ISBN: {{ textbook.isbn }}</li>
+            <li>Poster: {{ textbook.poster }}</li>
+          </ul>
+      {% endfor %}
+
+      {% endblock %}
+
 
       <form method="POST">
         <fieldset class="form-group">
