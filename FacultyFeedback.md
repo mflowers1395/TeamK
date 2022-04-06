@@ -62,8 +62,22 @@ Remember the dry run demo/presentation is on 4/19 and the final class presentati
 
 
 ## Week 12 - Mar 29 ##
+- Chandrika: roadblock #35: opened another to fix: #40
+- Angela: closed #40 and #41;  in progress #38 and #44 (nice complete stories!)
+- Marilyn: working on #31 (need to fix server)
+- Christopher: #39 in progress
+- Ayman: closed #34, now there are issues so #45 was opened. Still have #30 opened (mostly done; waiting for more bug fixes).  Researching payment system for feasibility
+- Sam: completed messaging system: #23.  Working to #42, then mob with Chandrika
+
 
 ## Week 13 - Apr 5 ##
+- Sam: completed #48 also helping Chandrika . Working on #42
+- Marilyn: working on #31 had breakthrough with deletion page, and can upload from webpage to DB.  Need to find a way to make deletion option to only available to a person to uploads.  Don't make identity management (assume you'll use OpenIDConnect or Azure Active Directory
+- Christopher: finished #39 , Wrote story #49 (debugging). 
+- Ayman: closed story #  in progress #50 thinking about #20 (Paypal REST API) and #30. Closed #45
+- Angela: closed #46, #44 and #38. Working on #51 and #52
+Chandrika: closed #47 GREAT Descriptions and Acceptance Criteria!  Opened #53
+
 
 ## Week 14 - Apr 12 ##
 
