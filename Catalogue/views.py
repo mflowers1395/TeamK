@@ -69,5 +69,6 @@ def wishlistForm(request):
     return render(request, 'catalogue/wishlistform.html', context)
 
 def deleteuploadtext(request):
-    t_name= request.POST['textbook']
-    return render(request, 'catalogue/delete.html/', {'textbook':t_name})
+    textbook_list = Textbook.objects.all()
+
+    return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
