@@ -9,6 +9,8 @@ def sellInterface(request):
     return render(request, 'seller/interface.html')
 
 def uploadText(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     if request.method == 'POST':
         form = UploadTextbookForm(request.POST)
         if form.is_valid():
