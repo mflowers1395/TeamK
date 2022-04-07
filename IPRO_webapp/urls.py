@@ -46,5 +46,7 @@ urlpatterns = [
     path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete'),
     path('browse/delete.html/browse.html', catalogue_views.browseTextbooks, name='browse.html'),
     path('browse/delete.html/delete.html', catalogue_views.deleteuploadtext, name='delete.html'),
+    path('checkout/<int:pk>/', catalogue_views.simpleCheckout, name='checkout' ),
+
 ]
 
