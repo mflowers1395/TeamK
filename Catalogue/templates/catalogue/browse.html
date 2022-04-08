@@ -44,7 +44,11 @@
           <ul>
             <li>Author: {{ textbook.author }}</li>
             <li>ISBN: {{ textbook.isbn }}</li>
+            <li>Price: {{ textbook.price }}</li>
             <li>Poster: {{ textbook.poster }}</li>
+            <li>
+              <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
+            </li>
           </ul>
       {% endfor %}
 
