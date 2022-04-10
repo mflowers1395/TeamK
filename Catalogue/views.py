@@ -1,8 +1,10 @@
 import imp
+import json
 from turtle import title
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from Catalogue.models import Textbook
+from Catalogue.models import Order, Textbook
 from User_Registration.models import WishList
 from User_Registration.forms import WishlistForm
 from django.contrib.auth import get_user_model
@@ -16,6 +18,11 @@ def browseTextbooks(request):
     textbook_list = Textbook.objects.all()
 
     return render(request, 'catalogue/browse.html', {'textbook_list': textbook_list})
+
+def deleteuploadtext(request):
+    textbook_list = Textbook.objects.all()
+
+    return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
 
 def searchCatalogue(request):
 
@@ -68,7 +75,15 @@ def wishlistForm(request):
 
     return render(request, 'catalogue/wishlistform.html', context)
 
-def deleteuploadtext(request):
-    textbook_list = Textbook.objects.all()
 
+<<<<<<< HEAD
+=======
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
+
+
+def simpleCheckout(request, pk):
+    textbook = Textbook.objects.get(id=pk)
+    context = {'textbook':textbook}
+    return render(request, 'catalogue/checkout.html', context)
+
+>>>>>>> b08d8adf065b08d0985f252000680b511bc8e241
