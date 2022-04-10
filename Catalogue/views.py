@@ -76,14 +76,9 @@ def wishlistForm(request):
     return render(request, 'catalogue/wishlistform.html', context)
 
 
-<<<<<<< HEAD
-=======
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
-
 
 def simpleCheckout(request, pk):
     textbook = Textbook.objects.get(id=pk)
     context = {'textbook':textbook}
     return render(request, 'catalogue/checkout.html', context)
-
->>>>>>> b08d8adf065b08d0985f252000680b511bc8e241
