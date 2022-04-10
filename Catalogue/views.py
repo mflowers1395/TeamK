@@ -76,9 +76,19 @@ def wishlistForm(request):
     return render(request, 'catalogue/wishlistform.html', context)
 
 
+<<<<<<< Updated upstream
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
+=======
+
+
+>>>>>>> Stashed changes
 
 def simpleCheckout(request, pk):
     textbook = Textbook.objects.get(id=pk)
     context = {'textbook':textbook}
     return render(request, 'catalogue/checkout.html', context)
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
