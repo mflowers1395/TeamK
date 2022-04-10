@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Store</title>
-	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../../../static/css/screen.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<style type="text/css">
 		body{
 			background-color: #f0f0f0;
-			
-		}
-
+			}
 	</style>
+  <title>Checkout</title>
 </head>
+
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg">
+  <header>
+    <h1 id="site-name">Books4U</h1>
+    <figure>
+      <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+    </figure>
+  </header>
+
+	<main class="container">
+    <aside class="" id="user-header">
+      <ul class="flex-container">
+      <li>
+        <figure>
+        <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+        class ="flex-item" id="university-logo"/>
+      </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="{% url 'account' %}"><img src="../../../../static/assets/account-icon.png"
+            alt="icon to access account settings"
+            id="my-account" class="grid-item"/></a>
+        </figure>
+      </li>
+      </ul>
+    </aside>
+
+		<article class="row">
+			<article class="col-lg">
 				<br>
 				<img src="{{product.image_url}}">
-			</div>
-			<div class="col-lg">
+			</article>
+			<article class="col-lg">
 				<br>
-				<div class="card card-body">
+				<article class="card card-body">
 					<h3>{{textbook.title}}</h3>
 					<hr>
 					<h4>Total: ${{textbook.price}}</h4>
 					<hr>
 					<div id="paypal-button-container"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+				</article>
+			</article>
+		</article>
+  </main>
+
+  <footer id="footer">
+    <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+      Illinois Institute of Technology, Spring 2022</p>
+  </footer>
 
     <script src="https://www.paypal.com/sdk/js?client-id=Ad3AimLJ9ZVXCmSQTm7KODiK__jRGJiv1JAVOr-j-mb77B6Za2hBUSkj7q5yUYvQNUF0QLCjCC3pjCCC&currency=USD&disable-funding=credit"></script>
 
     <script>
 
         var total = '{{textbook.price}}'
-        
+
 
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
