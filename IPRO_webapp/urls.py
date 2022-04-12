@@ -43,8 +43,8 @@ urlpatterns = [
     path('Messages/<int:pk>/NewMessage/', messaging_views.newMessage, name='NewMessage'),
     path('wishlistform/', catalogue_views.wishlistForm, name='wishlistform'),
     path('wishlist/', user_views.wishlist, name='wishlist'),
-    path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete'),
-    path('deleteconfirm/', catalogue_views.deleteconfirm, name='deleteconfirm'),
+    path('delete/', catalogue_views.deleteuploadtext, name='delete'),
+    path('deleteconfirm/<int:id>/', catalogue_views.deleteconfirm, name='deleteconfirm'),
     path('checkout/<int:pk>/', catalogue_views.simpleCheckout, name='checkout' ),
 
 ]

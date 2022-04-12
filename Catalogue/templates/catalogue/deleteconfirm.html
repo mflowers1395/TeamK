@@ -38,13 +38,22 @@
       <h5>Are You Sure You Want To Delete This Upload?</h5>
       {% block content %}
 
-      {% for textbook in textbook_list %}
-      <strong>{{textbook}}</strong>
+
+
+      {% for x in obj %}
+          <strong>{{ textbook.id }}</strong>
+          <ul>
+            <li>Author: {{ textbook.author }}</li>
+            <li>ISBN: {{ textbook.isbn }}</li>
+            <li>Price: {{ textbook.price }}</li>
+            <li>Poster: {{ textbook.poster }}</li>
+            </li>
+          </ul>
       {% endfor %}
 
       {% endblock %}
 
-      <form method="POST" action="/">
+      <form method="POST" action="/browse/">
         {% csrf_token %}
 
         <input type="submit" style="background-color:red" class="btn btn-lg btn-danger" value="Yes">

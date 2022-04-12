@@ -24,10 +24,12 @@ def deleteuploadtext(request):
 
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
 
-def deleteconfirm(request):
-    textbook_list = Textbook.objects.all()
-
-    return render(request, 'catalogue/deleteconfirm.html', {'textbook_list': textbook_list})
+def deleteconfirm(request, id):
+    textbook_list=get_object_or_404(Textbook,pk=id)
+    if request.method == "POST":
+        textbook_list.delete()
+        return HttpResponseRedirect("/")
+    return render(request, 'catalogue/deleteconfirm.html', {'textbook_list': Textbook})
     
 
 def searchCatalogue(request):

@@ -38,7 +38,7 @@
       <h1>Which Book Would You Like to Delete?</h1>
 
      {% for textbook in textbook_list %} 
-     <a href="/deleteconfirm/"><h3>{{textbook}}</h3> </a>
+     <a href="{% url 'deleteconfirm' textbook.id %}"><h3>{{textbook}}</h3> </a>
       Author: {{ textbook.author }} <p></p>
       Poster: {{ textbook.poster }}
      {% endfor %}
