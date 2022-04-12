@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" href="../../../static/css/screen.css"/>
+    <title>Delete Books</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="site-name">Books4U</h1>
+      <figure>
+        <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
+      </figure>
+    </header>
+
+    <main class=" content-section">
+      <aside class="" id="user-header">
+        <ul class="flex-container">
+        <li>
+          <figure>
+          <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+          class ="flex-item" id="university-logo"/>
+        </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="{% url 'account' %}"><img src="../../../../static/assets/account-icon.png"
+              alt="icon to access account settings"
+              id="my-account" class="grid-item"/></a>
+          </figure>
+        </li>
+        </ul>
+      </aside>
+
+      
+      <article>
+        <p>
+            Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>
+        </p>
+    </article>
+
+  </main>
+
+  <footer id="footer">
+    <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+      Illinois Institute of Technology, Spring 2022</p>
+  </footer>
+
+</body>
+</html>
