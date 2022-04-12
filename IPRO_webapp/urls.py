@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from re import template
-from django.urls import path
+from django.urls import include, path
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 import LandingPage
@@ -44,8 +44,7 @@ urlpatterns = [
     path('wishlistform/', catalogue_views.wishlistForm, name='wishlistform'),
     path('wishlist/', user_views.wishlist, name='wishlist'),
     path('browse/delete.html/', catalogue_views.deleteuploadtext, name='delete'),
-    path('browse/delete.html/browse.html', catalogue_views.browseTextbooks, name='browse.html'),
-    path('browse/delete.html/delete.html', catalogue_views.deleteuploadtext, name='delete.html'),
+    path('deleteconfirm/', catalogue_views.deleteconfirm, name='deleteconfirm'),
     path('checkout/<int:pk>/', catalogue_views.simpleCheckout, name='checkout' ),
 
 ]
