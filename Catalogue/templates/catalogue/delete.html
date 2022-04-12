@@ -35,29 +35,22 @@
 
       <style> h1 {text-align: center;} </style>
 
-      <h1>Which book do you want to delete?</h1>
+      <h1>Which Book Would You Like to Delete?</h1>
 
       {% block content %}
 
 
 
       {% for textbook in textbook_list %}
-          <strong>{{ textbook }}</strong>
+      <a href="/deleteconfirm/">{{ textbook }}</a>
           <ul>
             <li>Author: {{ textbook.author }}</li>
-            <li>ISBN: {{ textbook.isbn }}</li>
             <li>Poster: {{ textbook.poster }}</li>
           </ul>
       {% endfor %}
 
       {% endblock %}
 
-
-      <form method="POST">
-        <fieldset class="form-group">
-          <button class="button btn-outline-info" type="submit" value="">CONFIRM</button>
-        </fieldset>
-      </form>
 
       <article>
           <p>

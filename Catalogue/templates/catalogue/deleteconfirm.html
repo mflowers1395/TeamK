@@ -33,6 +33,15 @@
         </ul>
       </aside>
 
+      <style> h1,h5 {text-align: center;} </style>
+      <h1>Deletion Confirmation</h1>
+
+      <form method="POST" action="/">
+        {% csrf_token %}
+        <h5>Are You Sure You Want To Delete This Upload?</h5>
+        <input type="submit" style="background-color:red" class="btn btn-lg btn-danger" value="Yes">
+        </form>
+
       
       <article>
         <p>
