@@ -26,7 +26,7 @@ def deleteuploadtext(request):
 
 def deleteconfirm(request):
     textbook_list = Textbook.objects.all()
-    return render(request, "deleteconfirm.html", {'textbook_list': textbook_list})
+    return render(request, "catalogue/deleteconfirm.html", {'textbook_list': textbook_list})
 
 def searchCatalogue(request):
 
