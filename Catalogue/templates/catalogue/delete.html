@@ -37,19 +37,12 @@
 
       <h1>Which Book Would You Like to Delete?</h1>
 
-      {% block content %}
+     {% for textbook in textbook_list %} 
+     <a href="/deleteconfirm/"><h3>{{textbook}}</h3> </a>
+      Author: {{ textbook.author }} <p></p>
+      Poster: {{ textbook.poster }}
+     {% endfor %}
 
-
-
-      {% for textbook in textbook_list %}
-      <a href="/deleteconfirm/">{{ textbook }}</a>
-          <ul>
-            <li>Author: {{ textbook.author }}</li>
-            <li>Poster: {{ textbook.poster }}</li>
-          </ul>
-      {% endfor %}
-
-      {% endblock %}
 
 
       <article>

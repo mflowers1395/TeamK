@@ -1,7 +1,7 @@
 import imp
 import json
 from turtle import title
-from django.http import JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from Catalogue.models import Order, Textbook
@@ -26,7 +26,9 @@ def deleteuploadtext(request):
 
 def deleteconfirm(request):
     textbook_list = Textbook.objects.all()
-    return render(request, "catalogue/deleteconfirm.html", {'textbook_list': textbook_list})
+
+    return render(request, 'catalogue/deleteconfirm.html', {'textbook_list': textbook_list})
+    
 
 def searchCatalogue(request):
 
