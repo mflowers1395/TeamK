@@ -39,9 +39,7 @@
       {% block content %}
 
 
-
-      {% for x in obj %}
-          <strong>{{ textbook.id }}</strong>
+          <strong>{{ textbook }}</strong>
           <ul>
             <li>Author: {{ textbook.author }}</li>
             <li>ISBN: {{ textbook.isbn }}</li>
@@ -49,16 +47,16 @@
             <li>Poster: {{ textbook.poster }}</li>
             </li>
           </ul>
-      {% endfor %}
+    
 
       {% endblock %}
 
-      <form method="POST" action="/browse/">
+      <form action="{% url 'deleteconfirm' textbook.id %}" method="POST">
         {% csrf_token %}
-
-        <input type="submit" style="background-color:red" class="btn btn-lg btn-danger" value="Yes">
+        
+        <input type="submit" style="background-color:red"  value="DELETE">
         </form>
-
+<p>{{textbook.des}}</p>
       
       <article>
         <p>
