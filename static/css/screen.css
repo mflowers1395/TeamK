@@ -108,6 +108,15 @@ a.button {
   border-color: #D3D3D3;
   padding: 8px;
   width: 100%;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.button:hover,
+a.button:hover {
+  background-color: rgba(50, 50, 50, 0.5);
 }
 
 a.button {
