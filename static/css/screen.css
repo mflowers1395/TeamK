@@ -45,7 +45,7 @@ h1 {
 }
 
 img {
-  width: 60%;
+  width: 65%;
 }
 
 a {
@@ -146,12 +146,6 @@ form > fieldset {
   display: block;
   box-sizing: content-box;
   padding: 6px;
-  /*border-left-width: 6px;
-  border-left-color: red;/*#D3D3D3
-  border-left-style: solid;
-  border-right-width: 5px;
-  border-right-color: red;
-  border-right-style: solid;*/
 }
 
 em {
@@ -193,6 +187,7 @@ footer {
   font-size: 12px;
   text-align: center;
   font-style: italic;
+  margin-top: 120px;
 }
 
 aside > ul > li {
@@ -243,8 +238,17 @@ form > * {
   display: flex;
 }
 
+#book-list {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
 @media screen and (min-width: 500px){
- /* fix header */
+
  img {
    width: 80%;
  }
@@ -265,9 +269,14 @@ form > * {
 
  .button,
   a.button {
-   width: 65%;
+   width: 75%;
    display: grid;
    margin: auto;
+   margin-bottom: 15px;
+ }
+
+ img {
+   width: 70%;
  }
 
 }
@@ -275,8 +284,6 @@ form > * {
 @media screen and (min-width: 700px){
   .button,
   a.button {
-    width: 40%;
-    margin-bottom: 10px;
     border-radius: 50px;
   }
 
@@ -290,24 +297,30 @@ form > * {
 
   #main-messages button,
   .messages .button {
-    width: 100%;
+    width: 80%;
   }
 
   #payment {
     margin: auto;
     width: 60%;
   }
+
+  #chat .row {
+    width: 80%;
+    margin: auto;
+  }
+
 }
 
 
 @media screen and (min-width: 1000px){
   .button {
-    max-width: 200px;
+    max-width: 300px;
   }
 
   #main-messages button,
   .messages .button {
-    width: 100%;
+    width: 80%;
   }
 
   fieldset > * {
