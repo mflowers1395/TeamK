@@ -233,6 +233,8 @@ form > * {
 #main-messages button,
 .messages .button {
   text-transform: uppercase;
+  margin: auto;
+  width: 80%;
 }
 
 #main-messages button {
