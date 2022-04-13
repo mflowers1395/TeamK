@@ -33,6 +33,8 @@
         </li>
         </ul>
       </aside>
+
+      <article id="book-list">
       <h1>Catalogue List</h1>
 
       {% block content %}
@@ -53,7 +55,7 @@
       {% endfor %}
 
       {% endblock %}
-
+  </article>
   <article>
       <p>
           Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
