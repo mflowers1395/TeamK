@@ -33,6 +33,7 @@ header > * {
 #site-name {
   font-family: "American Typewriter", serif;
   font-weight: normal;
+  font-size: 26px;
 }
 
 h1 {
