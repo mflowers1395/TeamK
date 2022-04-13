@@ -69,6 +69,11 @@ main {
   align-items: center;
 }
 
+#payment {
+  display: block;
+  margin: 10px;
+}
+
 #user-role .flex-container {
   justify-content: space-between;
 }
@@ -233,6 +238,10 @@ form > * {
   text-align: center;
 }
 
+#payment-header {
+  display: flex;
+}
+
 @media screen and (min-width: 500px){
  /* fix header */
  img {
@@ -255,7 +264,7 @@ form > * {
 
  .button,
   a.button {
-   width: 60%;
+   width: 65%;
    display: grid;
    margin: auto;
  }
@@ -266,6 +275,8 @@ form > * {
   .button,
   a.button {
     width: 40%;
+    margin-bottom: 10px;
+    border-radius: 50px;
   }
 
   form {
@@ -279,6 +290,11 @@ form > * {
   #main-messages button,
   .messages .button {
     width: 100%;
+  }
+
+  #payment {
+    margin: auto;
+    width: 60%;
   }
 }
 
