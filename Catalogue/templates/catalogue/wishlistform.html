@@ -37,6 +37,8 @@
         form {text-align: center;}
       </style>
 
+      <h1>Add book to your wishlist</h1>
+
       {% load crispy_forms_tags %}
       <form method="POST">
         {% csrf_token %}
@@ -44,7 +46,7 @@
             {{ form|crispy }}
         </fieldset>
         <fieldset class="form-group">
-          <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
+          <a class="button btn-outline-info" type="button" href="{% url 'wishlist' %}">Add</a>
         </fieldset>
       </form>
 
@@ -56,7 +58,7 @@
       <h1>Catalogue List</h1>
 
       {% for textbook in textbook_list %}
-
+      <article class="center">
       <strong>{{ textbook }}</strong>
 
       <ul>
@@ -65,7 +67,7 @@
         <li>Price: {{ textbook.price }}</li>
         <li>Price: {{ textbook.poster }}</li>
       </ul>
-
+    </article>
       {% endfor %}
 
       {% endblock %}
