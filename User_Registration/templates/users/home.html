@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="user-role">
   <head>
-    <article class=" content-section">
-      {% if messages %}
-         {% for message in messages %}
-            <p class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </p>
-          {% endfor %}
-      {% endif %}
-    </article>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" href="../../../static/css/screen.css"/>
@@ -23,6 +14,16 @@
           <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
+
+    <article class=" content-section">
+      {% if messages %}
+         {% for message in messages %}
+            <p class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </p>
+          {% endfor %}
+      {% endif %}
+    </article>
 
     <main>
       <aside class="" id="user-header">
