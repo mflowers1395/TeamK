@@ -43,6 +43,7 @@
       {% if wishlist %}
 
       {% for textbook in wishlist.textbooks.all %}
+      <article class="center">
 
          <strong>{{ textbook }}</strong>
          <ul>
@@ -51,6 +52,8 @@
            <li>Price: {{ textbook.price }}</li>
            <li>Poster: {{ textbook.poster }}</li>
          </ul>
+
+      </article>
       {% endfor %}
 
       {% else %}

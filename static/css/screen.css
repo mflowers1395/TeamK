@@ -48,11 +48,24 @@ img {
   width: 65%;
 }
 
-a {
+a, .a {
   font-family: "American Typewriter", serif;
   color: red;
   letter-spacing: 1px;
   font-size: 12px;
+}
+
+.a {
+  color: blue;
+  text-decoration: underline;
+  background-color: white;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.wishlist-form > * {
+  padding: 0;
 }
 
 main {
