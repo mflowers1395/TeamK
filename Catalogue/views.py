@@ -34,8 +34,6 @@ def deleteconfirm(request, id):
 
 def searchCatalogue(request):
 
-    return render(request, 'catalogue/search.html')
-
     if request.method == 'POST':
 
 

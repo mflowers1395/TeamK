@@ -25,14 +25,10 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend>Upload a Textbook Or Msg Others </legend>
+                <legend style="text-align: center;">Upload a textbook or send a message</legend>
             </fieldset>
             <fieldset class="form-group">
-                <!-- <button class="btn btn-outline-info" type="button" value="#">Upload Textbook</button> -->
-                 <!-- I couldn't figure out way to have these as working buttons; if you can resolve this then modify file accordingly -->
-                <!-- <button class="ml-2 button" value="{% url 'uploadtext' %}">Upload a Textbook</button> -->
-                <a id="messages-button" class="button" href="{% url 'uploadtext' %}">Upload a Textbook</a>
-
+                <a class="button" href="{% url 'uploadtext' %}">Upload a Textbook</a>
                 <a id="messages-button" class="button" href="{% url 'Messages' %}">Message Others</a>
             </fieldset>
         </form>
