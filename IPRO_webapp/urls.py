@@ -48,4 +48,3 @@ urlpatterns = [
     path('checkout/<int:pk>/', catalogue_views.simpleCheckout, name='checkout' ),
 
 ]
-

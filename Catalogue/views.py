@@ -30,11 +30,14 @@ def deleteconfirm(request, id):
         textbook.delete()
         return HttpResponseRedirect("/browse/")
     return render(request, 'catalogue/deleteconfirm.html', {'textbook': textbook})
-    
+
 
 def searchCatalogue(request):
 
+    return render(request, 'catalogue/search.html')
+
     if request.method == 'POST':
+
 
         searchresults = request.POST['searchresults']
         textbook = Textbook.objects.all().filter(booktitle__contains=searchresults) | Textbook.objects.all().filter(author__contains=searchresults) | Textbook.objects.all().filter(isbn__contains=searchresults)
@@ -92,6 +95,3 @@ def simpleCheckout(request, pk):
     textbook = Textbook.objects.get(id=pk)
     context = {'textbook':textbook}
     return render(request, 'catalogue/checkout.html', context)
-
-
-
