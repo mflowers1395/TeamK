@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html id="browse-catalogue">
 <head>
-  <style>
-form {text-align: center;}
-</style>
-<div class=" content-section">
-    {% if messages %}
-       {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">
-              {{ message }}
-          </div>
-        {% endfor %}
-    {% endif %} 
-</div>
-<div class="container">
-    <form class="d-flex" action="{% url 'search' %}" method="POST">
-
-        {% csrf_token %}
-
-        <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
-        <button type="submit">Search</button>
-    </form>
-
-    <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
-
-        {% csrf_token %}
-         
-    <button type="submit">Add to Your Wishlist</button>
-
-    </form>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
@@ -65,7 +37,11 @@ form {text-align: center;}
       <article id="book-list">
       <h1>Catalogue List</h1>
 
-      {% block content %}
+        <form class="d-flex" action="/search/" method="POST">
+          <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
+          <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
+          <button type="submit" class="button">Search</button>
+        </form>
 
 
 
@@ -79,10 +55,15 @@ form {text-align: center;}
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
+            <li class="wishlist-form">
+              <form class="d-flex" action="/wishlistform/" method="POST">
+              <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
+              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</a>
+              </form>
+            </li>
           </ul>
       {% endfor %}
 
-      {% endblock %}
   </article>
   <article>
       <p>
