@@ -41,7 +41,7 @@
       {% if searchresults %}
 
       <h1>Search Result(s) Found</h1>
-      <article>
+      <article class="center">
         {% for search in searchresults %}
         <strong>{{ search }}</strong>
          <ul>
@@ -55,6 +55,9 @@
 
       {% else %}
       <h1>No Results Found</h1>
+      <article class="center">
+            <a class="button" href="{% url 'browse' %}">Search Again</a>
+      </article>
 
       {% endif %}
 
