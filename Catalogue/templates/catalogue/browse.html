@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html id="browse-catalogue">
 <head>
+  <style>
+form {text-align: center;}
+</style>
+<div class=" content-section">
+    {% if messages %}
+       {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+          </div>
+        {% endfor %}
+    {% endif %} 
+</div>
+<div class="container">
+    <form class="d-flex" action="{% url 'search' %}" method="POST">
+
+        {% csrf_token %}
+
+        <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
+        <button type="submit">Search</button>
+    </form>
+
+    <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+
+        {% csrf_token %}
+         
+    <button type="submit">Add to Your Wishlist</button>
+
+    </form>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
