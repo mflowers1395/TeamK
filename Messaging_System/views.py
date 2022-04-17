@@ -1,3 +1,4 @@
+from django.dispatch import receiver
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from Messaging_System.models import Chat, Message
@@ -39,8 +40,7 @@ def newChat(request):
                 return redirect('chat', pk = chatpk)    
         except:      
             return redirect('newchat')    
-        
-
+    
 def showChats(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -55,18 +55,24 @@ def newMessage(request, pk):
     if not request.user.is_authenticated:
         return redirect('login')
     if request.method == "POST":
-        chat = Chat.objects.get(pk = pk)    
+        chat = Chat.objects.get(pk = pk)
         if chat.user2 == request.user:      
-            messageReceiver = chat.user1    
+            messageReceiver = chat.user1
+            temp = chat.unread1
+            chat.unread1 = temp +1
+            chat.save(update_fields=['unread1'])
         else:      
-            messageReceiver = chat.user2      
+            messageReceiver = chat.user2 
+            temp = chat.unread2
+            chat.unread2 = temp +1
+            chat.save(update_fields=['unread2'])     
         newMessage = Message(        
             chat = chat,        
             sender = request.user,                                                     
             receiver = messageReceiver,        
             body = request.POST.get('message'),                
-        )       
-        newMessage.save()      
+        )     
+        newMessage.save()       
         return redirect('chat', pk = pk)
     
 
@@ -75,13 +81,21 @@ def showMessages(request, pk):
         return redirect('login')
     if request.method == "GET":
         form = messageForm()
-        chat = Chat.objects.get(pk = pk)
+        chat = Chat.objects.get(pk = pk)   
         message_list = Message.objects.filter(chat__pk__contains = pk)
+        if chat.user1 == request.user:
+            temp = 0
+            chat.unread1 = temp
+            chat.save(update_fields=['unread1'])
+        if chat.user2 == request.user:
+            temp = 0
+            chat.unread2 = temp
+            chat.save(update_fields=['unread2'])
         context = {      
             'chat': chat,      
             'form': form,      
             'message_list': message_list    
-        }    
+        }   
         return render(request, 'Messaging_System/chat.html', context)
  
 

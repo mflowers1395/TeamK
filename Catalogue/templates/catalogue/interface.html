@@ -16,6 +16,24 @@
 
 
     <main class=" content-section">
+      <aside class="" id="user-header">
+        <ul class="flex-container">
+        <li>
+          <figure>
+          <img src="../../../../static/assets/ILTECH_red_stacked.png" alt="university official logo"
+          class ="flex-item" id="university-logo"/>
+        </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="{% url 'account' %}"><img src="../../../../static/assets/account-icon.png"
+              alt="icon to access account settings"
+              id="my-account" class="grid-item"/></a>
+          </figure>
+        </li>
+        </ul>
+      </aside>
+      
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">

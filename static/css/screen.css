@@ -220,6 +220,19 @@ form > * {
   font-size: 16px;
 }
 
+#main-messages button,
+.messages .button {
+  text-transform: uppercase;
+}
+
+#main-messages button {
+  font-size: 16px;
+}
+.messages h5,
+.messagges h3 {
+  text-align: center;
+}
+
 @media screen and (min-width: 500px){
  /* fix header */
  img {
@@ -258,12 +271,26 @@ form > * {
   form {
     width: 60%;
   }
+
+  .messages form {
+    width: 100%;
+  }
+
+  #main-messages button,
+  .messages .button {
+    width: 100%;
+  }
 }
 
 
 @media screen and (min-width: 1000px){
   .button {
     max-width: 200px;
+  }
+
+  #main-messages button,
+  .messages .button {
+    width: 100%;
   }
 
   fieldset > * {
@@ -273,5 +300,9 @@ form > * {
 
   form {
     width: 40%;
+  }
+
+  .messages form {
+    width: 100%;
   }
 }

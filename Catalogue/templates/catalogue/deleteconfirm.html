@@ -33,37 +33,35 @@
         </ul>
       </aside>
 
-      <style> h1 {text-align: center;} </style>
-
-      <h1>Which Book Would You Like to Delete?</h1>
-
+      <style> h1,h5 {text-align: center;} </style>
+      <h1>Deletion Confirmation</h1>
+      <h5>Are You Sure You Want To Delete This Upload?</h5>
       {% block content %}
-
-
-
       {% for textbook in textbook_list %}
-      <a href="/deleteconfirm/">{{ textbook }}</a>
-          <ul>
-            <li>Author: {{ textbook.author }}</li>
-            <li>Poster: {{ textbook.poster }}</li>
-          </ul>
+      <strong>{{ textbook }}</strong>
       {% endfor %}
 
       {% endblock %}
 
+      <form method="POST" action="/">
+        {% csrf_token %}
 
+        <input type="submit" style="background-color:red" class="btn btn-lg btn-danger" value="Yes">
+        </form>
+
+      
       <article>
-          <p>
-              Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>
-          </p>
-      </article>
+        <p>
+            Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>
+        </p>
+    </article>
 
-    </main>
+  </main>
 
-    <footer id="footer">
-      <p>Site content and design copyright TeamK "IPRO: Global Product Development",
-        Illinois Institute of Technology, Spring 2022</p>
-    </footer>
+  <footer id="footer">
+    <p>Site content and design copyright TeamK "IPRO: Global Product Development",
+      Illinois Institute of Technology, Spring 2022</p>
+  </footer>
 
-  </body>
+</body>
 </html>

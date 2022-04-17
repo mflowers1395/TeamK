@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="messages">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -20,7 +20,7 @@
       </header>
 
     <main class="container">
-      
+
       <aside class="" id="user-header">
         <ul class="flex-container">
         <li>
@@ -60,12 +60,12 @@
         <article class="row">
             <div class="col-md-12 my-1">
                 {% if message.sender == request.user %}
-                    <div class="col-md-12">
-                        <p>You: {{ message.body }}</p>
+                    <div class="col-md-12"> 
+                      <p>You: {{ message.body }}</p>
                     </div>
                 {% elif message.receiver == request.user%}
                     <div class="col-md-12">
-                        <p>{{message.sender}}: {{ message.body }}</p>
+                      <p>{{message.sender}}: {{ message.body }}</p>
                     </div>
                 {% endif %}
             </div>
