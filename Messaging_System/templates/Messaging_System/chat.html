@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="messages">
+<html class="messages" id="chat">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -77,7 +77,7 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <fieldset class="d-grid gap-2 mt-3">
-                        <button class="btn button btn-light" type="submit">Send Message</button>
+                        <button class="button btn-light" type="submit">Send Message</button>
                     </fieldset>
                 </form>
             </div>

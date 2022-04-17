@@ -1,7 +1,7 @@
 import imp
 import json
 from turtle import title
-from django.http import JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from Catalogue.models import Order, Textbook
@@ -24,13 +24,18 @@ def deleteuploadtext(request):
 
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
 
-def deleteconfirm(request):
-    textbook_list = Textbook.objects.all()
-    return render(request, "catalogue/deleteconfirm.html", {'textbook_list': textbook_list})
+def deleteconfirm(request, id):
+    textbook=get_object_or_404(Textbook,pk=id)
+    if request.method == "POST":
+        textbook.delete()
+        return HttpResponseRedirect("/browse/")
+    return render(request, 'catalogue/deleteconfirm.html', {'textbook': textbook})
+
 
 def searchCatalogue(request):
 
     if request.method == 'POST':
+
 
         searchresults = request.POST['searchresults']
         textbook = Textbook.objects.all().filter(booktitle__contains=searchresults) | Textbook.objects.all().filter(author__contains=searchresults) | Textbook.objects.all().filter(isbn__contains=searchresults)

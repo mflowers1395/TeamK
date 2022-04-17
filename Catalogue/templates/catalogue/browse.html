@@ -33,9 +33,15 @@
         </li>
         </ul>
       </aside>
+
+      <article id="book-list">
       <h1>Catalogue List</h1>
 
-      {% block content %}
+        <form class="d-flex" action="/search/" method="POST">
+          <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
+          <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
+          <button type="submit" class="button">Search</button>
+        </form>
 
 
 
@@ -49,11 +55,16 @@
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
+            <li class="wishlist-form">
+              <form class="d-flex" action="/wishlistform/" method="POST">
+              <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
+              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</a>
+              </form>
+            </li>
           </ul>
       {% endfor %}
 
-      {% endblock %}
-
+  </article>
   <article>
       <p>
           Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
