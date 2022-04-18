@@ -49,7 +49,7 @@
 			<article class="col-lg">
 				<br>
 				<article class="card card-body">
-					<h3>{{textbook.title}}</h3>
+					<h3>Book: {{textbook.booktitle}}</h3>
 					<hr>
 					<h4>Total: ${{textbook.price}}</h4>
 					<hr>
@@ -75,7 +75,6 @@
     <script>
 
         var total = '{{textbook.price}}'
-
 
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
