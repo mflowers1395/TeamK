@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Browse Catalogue</title>
+  <div class=" content-section">
+    {% if messages %}
+       {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+          </div>
+        {% endfor %}
+    {% endif %} 
+</div>
 </head>
 
   <body>
