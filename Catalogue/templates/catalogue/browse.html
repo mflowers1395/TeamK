@@ -49,7 +49,7 @@
         <form class="d-flex" action="/search/" method="POST">
           {% csrf_token %}
           <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
-          <button type="submit" class="button">Search</button>
+          <button type="submit" href="{% url 'search' %}" class="button search">Search</button>
         </form>
 
 
