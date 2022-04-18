@@ -12,7 +12,7 @@
               {{ message }}
           </div>
         {% endfor %}
-    {% endif %} 
+    {% endif %}
 </div>
 </head>
 
@@ -48,7 +48,6 @@
 
         <form class="d-flex" action="/search/" method="POST">
           {% csrf_token %}
-          <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
           <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
           <button type="submit" class="button">Search</button>
         </form>
@@ -66,10 +65,8 @@
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
             <li class="wishlist-form">
-              <form class="d-flex" action="/wishlistform/" method="POST">
-                {% csrf_token %}
-              <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
-              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</a>
+              <form class="d-flex" action="/wishlistform/" method="POST"> {% csrf_token %}
+              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</button>
               </form>
             </li>
           </ul>
