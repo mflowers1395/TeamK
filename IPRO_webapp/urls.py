@@ -17,11 +17,9 @@ from re import template
 from django.urls import include, path
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-import LandingPage
 from User_Registration import views as user_views
 from Seller import views as seller_views
 from Catalogue import views as catalogue_views
-from LandingPage import views as landing
 from Messaging_System import views as messaging_views
 
 urlpatterns = [
