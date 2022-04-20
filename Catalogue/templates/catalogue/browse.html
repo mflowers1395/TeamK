@@ -65,8 +65,9 @@
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
             <li class="wishlist-form">
-              <form class="d-flex" action="/wishlistform/" method="POST"> {% csrf_token %}
-              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</button>
+              <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Add to Your Wishlist</button>
               </form>
             </li>
           </ul>
