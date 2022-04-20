@@ -97,6 +97,3 @@ def showMessages(request, pk):
             'message_list': message_list    
         }   
         return render(request, 'Messaging_System/chat.html', context)
- 
-
-
