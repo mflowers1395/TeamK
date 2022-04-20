@@ -51,6 +51,10 @@
           <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
           <button type="submit" href="{% url 'search' %}" class="button search">Search</button>
         </form>
+        <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+          {% csrf_token %}
+          <button type="submit">Add to Your Wishlist</button>
+        </form>
 
 
 
@@ -64,10 +68,6 @@
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
-              <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
-                {% csrf_token %}
-                <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</button>
-              </form>
           </ul>
       {% endfor %}
 

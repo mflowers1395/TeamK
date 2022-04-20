@@ -43,7 +43,7 @@ def reportFraud(request):
         form = ReportFraudForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            msg = Fraud(username = cd['username'], report = cd['report'])
+            msg = Fraud(username = request.user.username, report = cd['report'])
             msg.save()
             messages.success(request, f'Thank you. We will look into it')
             return redirect ('account')
