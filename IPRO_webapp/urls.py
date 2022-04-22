@@ -17,16 +17,14 @@ from re import template
 from django.urls import include, path
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-import LandingPage
 from User_Registration import views as user_views
 from Seller import views as seller_views
 from Catalogue import views as catalogue_views
-from LandingPage import views as landing
 from Messaging_System import views as messaging_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', landing.launchLandingPage, name='landing'),
+    path('', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
@@ -48,4 +46,3 @@ urlpatterns = [
     path('checkout/<int:pk>/', catalogue_views.simpleCheckout, name='checkout' ),
 
 ]
-

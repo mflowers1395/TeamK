@@ -37,12 +37,14 @@
 
       <h1>Which Book Would You Like to Delete?</h1>
 
-     {% for textbook in textbook_list %} 
+      <article class="center">
+     {% for textbook in textbook_list %}
      <a href="{% url 'deleteconfirm' textbook.id %}"><h3>{{textbook}}</h3> </a>
       Author: {{ textbook.author }} <p></p>
       Poster: {{ textbook.poster }}
+      Price: {{ textbook.price }}
      {% endfor %}
-
+    </article>
 
 
       <article>

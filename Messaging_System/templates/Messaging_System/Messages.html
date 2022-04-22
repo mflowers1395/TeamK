@@ -55,9 +55,15 @@
             <div class="card col-md-12 p-5 shadow-sm">
                 {%if chat.user1 == request.user %}
                 <h5>{{ chat.user2 }}</h5><a class="stretched-link" href="{% url 'chat' chat.pk %}"></a>
+                  {%if chat.unread1 != 0 %}
+                  <h6>{{ chat.unread1 }} NEW</h6>
+                  {% endif %}
                 {% endif %}
                 {%if chat.user2 == request.user %}
                 <h5>{{ chat.user1 }}</h5><a class="stretched-link" href="{% url 'chat' chat.pk %}"></a>
+                  {%if chat.unread2 != 0 %}
+                  <h6>{{ chat.unread2 }} NEW</h6>
+                  {% endif %}
                 {% endif %}
             </div>
         </article>

@@ -34,11 +34,12 @@
       </aside>
 
       <style> h1,h5 {text-align: center;} </style>
+      <style> h5 {font-style: italic; letter-spacing: 1px;}</style>
       <h1>Deletion Confirmation</h1>
-      <h5>Are You Sure You Want To Delete This Upload?</h5>
+      <h5>Sure you want to delete this book?</h5>
       {% block content %}
 
-
+        <article style="margin-top: 30px" class="center">
           <strong>{{ textbook }}</strong>
           <ul>
             <li>Author: {{ textbook.author }}</li>
@@ -47,17 +48,18 @@
             <li>Poster: {{ textbook.poster }}</li>
             </li>
           </ul>
-    
+        </article>
 
       {% endblock %}
 
       <form action="{% url 'deleteconfirm' textbook.id %}" method="POST">
         {% csrf_token %}
-        
-        <input type="submit" style="background-color:red"  value="DELETE">
+
+        <input type="submit" style="background-color:red" style="color:white" class="button btn-lg btn-danger"
+        value="Delete this book"/>
         </form>
 <p>{{textbook.des}}</p>
-      
+
       <article>
         <p>
             Changed Your Mind? <a class="ml-2" href="{% url 'browse' %}">Return to Catalogue</a>

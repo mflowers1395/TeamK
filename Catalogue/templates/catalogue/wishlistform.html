@@ -37,16 +37,18 @@
         form {text-align: center;}
       </style>
 
+      <h1>Add book to your wishlist</h1>
       {% load crispy_forms_tags %}
-      <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            {{ form|crispy }}
-        </fieldset>
-        <fieldset class="form-group">
-          <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
-        </fieldset>
-      </form>
+      <div class=" content-section">
+          <form method="POST">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                  {{ form|crispy }}
+              </fieldset>
+              <div class="form-group">
+                  <button class="button btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
+              </div>
+          </form>
 
       {% block content %}
       <style>
@@ -56,14 +58,16 @@
       <h1>Catalogue List</h1>
 
       {% for textbook in textbook_list %}
-
+      <article class="center">
       <strong>{{ textbook }}</strong>
 
       <ul>
         <li>Author: {{ textbook.author }}</li>
         <li>ISBN: {{ textbook.isbn }}</li>
+        <li>Price: {{ textbook.price }}</li>
+        <li>Poster: {{ textbook.poster }}</li>
       </ul>
-
+    </article>
       {% endfor %}
 
       {% endblock %}

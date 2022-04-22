@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'User_Registration.apps.UsersConfig',
     'Seller.apps.SellerConfig',
-    'LandingPage.apps.LandingpageConfig',
     'Catalogue.apps.CatalogueConfig',
     'Messaging_System',
     'crispy_forms',

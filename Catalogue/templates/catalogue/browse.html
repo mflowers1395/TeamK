@@ -15,6 +15,16 @@
       </figure>
     </header>
 
+    <div class=" content-section center">
+      {% if messages %}
+         {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+          {% endfor %}
+      {% endif %}
+  </div>
+
     <main class="container content-section">
       <aside class="" id="user-header">
         <ul class="flex-container">
@@ -33,9 +43,16 @@
         </li>
         </ul>
       </aside>
+
+      <article id="book-list">
       <h1>Catalogue List</h1>
 
-      {% block content %}
+        <form class="d-flex" action="/search/" method="POST">
+          {% csrf_token %}
+          <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
+          <button type="submit" href="{% url 'search' %}" class="button search">Search</button>
+        </form>
+
 
 
 
@@ -49,11 +66,16 @@
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
             </li>
+            <li class="wishlist-form">
+              <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class= "a">Add to Your Wishlist</button>
+              </form>
+            </li>
           </ul>
       {% endfor %}
 
-      {% endblock %}
-
+  </article>
   <article>
       <p>
           Finished? <a class="ml-2" href="{% url 'account' %}">Return to Account Home</a>
