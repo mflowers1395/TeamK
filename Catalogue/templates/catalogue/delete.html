@@ -40,9 +40,12 @@
       <article class="center">
      {% for textbook in textbook_list %}
      <a href="{% url 'deleteconfirm' textbook.id %}"><h3>{{textbook}}</h3> </a>
-      Author: {{ textbook.author }} <p></p>
-      Poster: {{ textbook.poster }}
-      Price: {{ textbook.price }}
+      <ul>
+      <li>Author: {{ textbook.author }}</li>
+      <li>ISBN: {{ textbook.isbn }}</li>
+      <li>Price: {{ textbook.price }}</li>
+      <li>Poster: {{ textbook.poster }}</li>
+       </ul>
      {% endfor %}
     </article>
 
