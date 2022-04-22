@@ -23,7 +23,7 @@ def browseTextbooks(request):
     return render(request, 'catalogue/browse.html', {'textbook_list': textbook_list})
 
 def deleteuploadtext(request):
-    textbook_list = Textbook.objects.all()
+    textbook_list = Textbook.objects.filter(poster__username=request.user.username)
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
 
      
