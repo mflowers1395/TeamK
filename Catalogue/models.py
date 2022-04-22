@@ -6,7 +6,6 @@ class Textbook(models.Model):
     author = models.CharField('Author', max_length=30)
     isbn = models.CharField('ISBN', max_length=13)
     price = models.FloatField('Price', max_length=8, default=10)
-    poster = models.ForeignKey(User, on_delete=models.CASCADE, related_name='+')
     
 
     def __str__(self):
