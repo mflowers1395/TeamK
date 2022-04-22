@@ -24,7 +24,7 @@ def browseTextbooks(request):
 
 def deleteuploadtext(request):
     textbook_list = Textbook.objects.all()
-    return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
+   
 
      
 
@@ -89,7 +89,14 @@ def wishlistForm(request):
 
     return render(request, 'catalogue/wishlistform.html', context)
 
+
+
+
+
+
 def simpleCheckout(request, pk):
     textbook = Textbook.objects.get(id=pk)
     context = {'textbook':textbook}
     return render(request, 'catalogue/checkout.html', context)
+
+
