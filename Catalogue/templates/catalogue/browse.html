@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Browse Catalogue</title>
-  <div class=" content-section">
-    {% if messages %}
-       {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">
-              {{ message }}
-          </div>
-        {% endfor %}
-    {% endif %}
-</div>
 </head>
 
   <body>
@@ -23,6 +14,16 @@
         <img id="logo" src="../../../../static/assets/booklogo.png" alt="Books4U logo"/>
       </figure>
     </header>
+
+    <div class=" content-section center">
+      {% if messages %}
+         {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+          {% endfor %}
+      {% endif %}
+  </div>
 
     <main class="container content-section">
       <aside class="" id="user-header">
@@ -51,10 +52,7 @@
           <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
           <button type="submit" href="{% url 'search' %}" class="button search">Search</button>
         </form>
-        <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
-          {% csrf_token %}
-          <button type="submit">Add to Your Wishlist</button>
-        </form>
+
 
 
 
@@ -67,6 +65,12 @@
             <li>Poster: {{ textbook.poster }}</li>
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
+            </li>
+            <li class="wishlist-form">
+              <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class= "a">Add to Your Wishlist</button>
+              </form>
             </li>
           </ul>
       {% endfor %}

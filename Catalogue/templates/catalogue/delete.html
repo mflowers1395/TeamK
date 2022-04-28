@@ -40,7 +40,11 @@
       <article class="center">
      {% for textbook in textbook_list %}
      <a href="{% url 'deleteconfirm' textbook.id %}"><h3>{{textbook}}</h3> </a>
+<<<<<<< HEAD
         <ul>
+=======
+      <ul>
+>>>>>>> eba19dd71f13cfa2c9dbbadfed67e5cb36e228fe
       <li>Author: {{ textbook.author }}</li>
       <li>ISBN: {{ textbook.isbn }}</li>
       <li>Price: {{ textbook.price }}</li>
