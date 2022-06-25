@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 <link rel="stylesheet" href="../../../static/css/screen.css"/>
 <title>Browse Catalogue</title>
+  <div class=" content-section">
+    {% if messages %}
+       {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+          </div>
+        {% endfor %}
+    {% endif %}
+</div>
 </head>
 
   <body>
@@ -38,9 +47,13 @@
       <h1>Catalogue List</h1>
 
         <form class="d-flex" action="/search/" method="POST">
-          <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
+          {% csrf_token %}
           <input type="search" placeholder="Search By Title, Author, or ISBN" name="searchresults"/>
-          <button type="submit" class="button">Search</button>
+          <button type="submit" href="{% url 'search' %}" class="button search">Search</button>
+        </form>
+        <form class="d-flex" action="{% url 'wishlistform' %}" method="POST">
+          {% csrf_token %}
+          <button type="submit">Add to Your Wishlist</button>
         </form>
 
 
@@ -54,12 +67,6 @@
             <li>Poster: {{ textbook.poster }}</li>
             <li>
               <a target="_blank"  href="{% url 'checkout' textbook.id  %}">Buy Now</a>
-            </li>
-            <li class="wishlist-form">
-              <form class="d-flex" action="/wishlistform/" method="POST">
-              <input type="hidden" name="csrfmiddlewaretoken" value="ykLDbSj9Em3aucvf7MWi9HrHIJ5serkI7pdJHXtyqueJ1QFtUBQyYvcJf2tdWeqz">
-              <button type="submit" href="{% url 'wishlistform' %}" class="a">Add to Your Wishlist</a>
-              </form>
             </li>
           </ul>
       {% endfor %}

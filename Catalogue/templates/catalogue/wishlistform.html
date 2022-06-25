@@ -38,17 +38,17 @@
       </style>
 
       <h1>Add book to your wishlist</h1>
-
       {% load crispy_forms_tags %}
-      <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            {{ form|crispy }}
-        </fieldset>
-        <fieldset class="form-group">
-          <a class="button btn-outline-info" type="button" href="{% url 'wishlist' %}">Add</a>
-        </fieldset>
-      </form>
+      <div class=" content-section">
+          <form method="POST">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                  {{ form|crispy }}
+              </fieldset>
+              <div class="form-group">
+                  <button class="btn btn-outline-info" type="submit" value="{% url 'browse' %}">Add</button>
+              </div>
+          </form>
 
       {% block content %}
       <style>
@@ -65,7 +65,7 @@
         <li>Author: {{ textbook.author }}</li>
         <li>ISBN: {{ textbook.isbn }}</li>
         <li>Price: {{ textbook.price }}</li>
-        <li>Price: {{ textbook.poster }}</li>
+        <li>Poster: {{ textbook.poster }}</li>
       </ul>
     </article>
       {% endfor %}

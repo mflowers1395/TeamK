@@ -12,7 +12,6 @@ class UserRegisterForm(UserCreationForm):
 
 class WishlistForm(forms.Form):
 
-    username = forms.CharField(max_length=50)
     isbn = forms.CharField(max_length=13)
 
 class chatForm(forms.Form):  
@@ -23,7 +22,6 @@ class messageForm(forms.Form):
 
 class ReportFraudForm(forms.Form):
 
-    username = forms.CharField(max_length=50)
     report = forms.CharField(widget=forms.Textarea())
 
 

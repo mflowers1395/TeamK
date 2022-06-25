@@ -53,26 +53,26 @@ def wishlistForm(request):
              cd = form.cleaned_data
 
              try:
-                 get_user_model().objects.get(username=cd['username'])
+                 get_user_model().objects.get(username=request.user.username)
 
-                 if WishList.objects.filter(username=cd['username']).exists():
+                 if WishList.objects.filter(username=request.user.username).exists():
 
-                     wl = WishList.objects.get(username=cd['username'])
-                     wl.textbooks.add(Textbook.objects.filter(isbn=cd['isbn']).get())
+                     wl = WishList.objects.get(username=request.user.username)
+                     wl.textbooks.add(Textbook.objects.filter(isbn__contains=cd['isbn']).get())
                      isbn = cd['isbn']
                      messages.success(request, f'Textbook {isbn} added to your wishlist!')
                      return redirect('browse')
 
                  else:
 
-                     new_wl = WishList.objects.create(username=cd['username'])
+                     new_wl = WishList.objects.create(username=request.user.username)
                      new_wl.textbooks.add(Textbook.objects.filter(isbn=cd['isbn']))
                      isbn = cd['isbn']
                      messages.success(request, f'Textbook {isbn} added to your wishlist!')
                      return redirect('browse')
 
              except get_user_model().DoesNotExist:
-                 username = cd['username']
+                 username = request.user.username
                  messages.error(request, f'{username} does not exist')
                  return redirect('browse')
 
