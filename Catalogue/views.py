@@ -1,5 +1,7 @@
+
 import imp
 import json
+
 from turtle import title
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_object_or_404, render, redirect
@@ -8,6 +10,7 @@ from Catalogue.models import Order, Textbook
 from User_Registration.models import WishList
 from User_Registration.forms import WishlistForm
 from django.contrib.auth import get_user_model
+
 
 def catalogueInterface(request):
 
@@ -20,9 +23,11 @@ def browseTextbooks(request):
     return render(request, 'catalogue/browse.html', {'textbook_list': textbook_list})
 
 def deleteuploadtext(request):
-    textbook_list = Textbook.objects.all()
-
+    textbook_list = Textbook.objects.filter(poster__username=request.user.username)
     return render(request, 'catalogue/delete.html', {'textbook_list': textbook_list})
+
+     
+
 
 def deleteconfirm(request, id):
     textbook=get_object_or_404(Textbook,pk=id)
@@ -84,7 +89,14 @@ def wishlistForm(request):
 
     return render(request, 'catalogue/wishlistform.html', context)
 
+
+
+
+
+
 def simpleCheckout(request, pk):
     textbook = Textbook.objects.get(id=pk)
     context = {'textbook':textbook}
     return render(request, 'catalogue/checkout.html', context)
+
+
